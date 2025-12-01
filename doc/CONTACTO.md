@@ -25,6 +25,4 @@ https://calendly.com/micredito786-konfia/auditoria-crediticia-gratuita-786
 ## Redes Sociales
 - **Instagram:** https://www.instagram.com/micredito786/
 - **Facebook:** https://www.facebook.com/micredito786
-- **TikTok:** https://www.tiktok.com/@micredito786
-
-> ⚠️ **NOTA:** Revisar nombre de cuenta de TikTok - vi @micrediti786 con falta de ortografía (falta la "o")
+- **TikTok:** https://www.tiktok.com/@micrediti786
