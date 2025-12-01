@@ -297,14 +297,16 @@ export function OfferSection() {
               </p>
             </div>
 
-            <Button
-              variant="cta"
-              size="xl"
-              className="w-full text-xl"
-              rightIcon={<ArrowRight className="w-6 h-6" />}
-            >
-              SÍ, QUIERO MI AUDITORÍA GRATUITA
-            </Button>
+            <a href="https://calendly.com/micredito786-konfia/auditoria-crediticia-gratuita-786" target="_blank" rel="noopener noreferrer" className="w-full">
+              <Button
+                variant="cta"
+                size="xl"
+                className="w-full text-xl"
+                rightIcon={<ArrowRight className="w-6 h-6" />}
+              >
+                SÍ, QUIERO MI AUDITORÍA GRATUITA
+              </Button>
+            </a>
 
             <div className="flex flex-wrap justify-center gap-4 mt-4 text-sm text-foreground-muted">
               <span>✅ 100% en español</span>

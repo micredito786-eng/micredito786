@@ -143,13 +143,15 @@ export function PainSection() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <p className="text-3xl font-bold text-primary mb-6">¿HASTA CUÁNDO?</p>
-          <Button
-            variant="cta"
-            size="lg"
-            rightIcon={<ArrowRight className="w-5 h-5" />}
-          >
-            QUIERO SALIR DE ESTO YA
-          </Button>
+          <a href="https://calendly.com/micredito786-konfia/auditoria-crediticia-gratuita-786" target="_blank" rel="noopener noreferrer">
+            <Button
+              variant="cta"
+              size="lg"
+              rightIcon={<ArrowRight className="w-5 h-5" />}
+            >
+              QUIERO SALIR DE ESTO YA
+            </Button>
+          </a>
           <p className="text-foreground-muted text-sm mt-3">47 cupos restantes</p>
         </motion.div>
       </Container>

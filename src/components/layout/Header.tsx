@@ -71,7 +71,7 @@ export function Header() {
           {/* CTA y teléfono */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:+1XXXXXXXXXX"
+              href="tel:+17862510360"
               className={`flex items-center gap-2 text-sm font-medium transition-colors ${
                 isScrolled
                   ? 'text-foreground hover:text-primary'
@@ -79,11 +79,13 @@ export function Header() {
               }`}
             >
               <Phone className="w-4 h-4" />
-              <span>(XXX) XXX-XXXX</span>
+              <span>(786) 251-0360</span>
             </a>
-            <Button variant="cta" size="sm">
-              AGENDA GRATIS
-            </Button>
+            <a href="https://calendly.com/micredito786-konfia/auditoria-crediticia-gratuita-786" target="_blank" rel="noopener noreferrer">
+              <Button variant="cta" size="sm">
+                AGENDA GRATIS
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -125,15 +127,17 @@ export function Header() {
                 ))}
                 <hr className="my-4" />
                 <a
-                  href="tel:+1XXXXXXXXXX"
+                  href="tel:+17862510360"
                   className="flex items-center gap-2 text-foreground py-2"
                 >
                   <Phone className="w-4 h-4" />
-                  <span>(XXX) XXX-XXXX</span>
+                  <span>(786) 251-0360</span>
                 </a>
-                <Button variant="cta" size="lg" className="w-full">
-                  AGENDA TU AUDITORÍA GRATIS
-                </Button>
+                <a href="https://calendly.com/micredito786-konfia/auditoria-crediticia-gratuita-786" target="_blank" rel="noopener noreferrer" className="w-full">
+                  <Button variant="cta" size="lg" className="w-full">
+                    AGENDA TU AUDITORÍA GRATIS
+                  </Button>
+                </a>
               </div>
             </Container>
           </motion.div>

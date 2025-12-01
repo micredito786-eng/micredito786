@@ -188,13 +188,15 @@ export function ForWhoSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <Button
-            variant="cta"
-            size="lg"
-            rightIcon={<ArrowRight className="w-5 h-5" />}
-          >
-            SÍ, QUIERO TRABAJAR CON USTEDES
-          </Button>
+          <a href="https://calendly.com/micredito786-konfia/auditoria-crediticia-gratuita-786" target="_blank" rel="noopener noreferrer">
+            <Button
+              variant="cta"
+              size="lg"
+              rightIcon={<ArrowRight className="w-5 h-5" />}
+            >
+              SÍ, QUIERO TRABAJAR CON USTEDES
+            </Button>
+          </a>
           <p className="text-foreground-muted text-sm mt-3">
             En español · Sin compromiso · 47 cupos
           </p>

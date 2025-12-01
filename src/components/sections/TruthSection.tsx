@@ -116,13 +116,15 @@ export function TruthSection() {
             <p className="text-xl font-bold text-primary mb-6">
               NO en 7 años. EN 45-135 DÍAS.
             </p>
-            <Button
-              variant="cta"
-              size="lg"
-              rightIcon={<ArrowRight className="w-5 h-5" />}
-            >
-              MUÉSTRAME CÓMO FUNCIONA
-            </Button>
+            <a href="https://calendly.com/micredito786-konfia/auditoria-crediticia-gratuita-786" target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="cta"
+                size="lg"
+                rightIcon={<ArrowRight className="w-5 h-5" />}
+              >
+                MUÉSTRAME CÓMO FUNCIONA
+              </Button>
+            </a>
             <p className="text-sm text-foreground-muted mt-3">
               47 cupos · Atención en español 🇪🇸
             </p>

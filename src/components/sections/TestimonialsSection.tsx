@@ -159,13 +159,15 @@ export function TestimonialsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <Button
-            variant="cta"
-            size="lg"
-            rightIcon={<ArrowRight className="w-5 h-5" />}
-          >
-            QUIERO RESULTADOS COMO ESTOS
-          </Button>
+          <a href="https://calendly.com/micredito786-konfia/auditoria-crediticia-gratuita-786" target="_blank" rel="noopener noreferrer">
+            <Button
+              variant="cta"
+              size="lg"
+              rightIcon={<ArrowRight className="w-5 h-5" />}
+            >
+              QUIERO RESULTADOS COMO ESTOS
+            </Button>
+          </a>
           <p className="text-foreground-muted text-sm mt-3">
             47 cupos · Todo en español 🇪🇸
           </p>

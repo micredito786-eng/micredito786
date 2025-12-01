@@ -100,14 +100,16 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.2 }}
           >
-            <Button
-              variant="cta"
-              size="xl"
-              className="text-lg sm:text-xl px-8 sm:px-12 py-5 sm:py-6"
-              rightIcon={<ArrowRight className="w-6 h-6" />}
-            >
-              QUIERO MI CUPO AHORA
-            </Button>
+            <a href="https://calendly.com/micredito786-konfia/auditoria-crediticia-gratuita-786" target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="cta"
+                size="xl"
+                className="text-lg sm:text-xl px-8 sm:px-12 py-5 sm:py-6"
+                rightIcon={<ArrowRight className="w-6 h-6" />}
+              >
+                QUIERO MI CUPO AHORA
+              </Button>
+            </a>
             <p className="text-white/70 mt-4 text-sm">
               Auditoría gratuita - Solo 30 minutos
             </p>
