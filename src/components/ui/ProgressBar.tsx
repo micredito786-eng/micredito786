@@ -11,6 +11,7 @@ interface ProgressBarProps {
   variant?: 'primary' | 'secondary' | 'gradient';
   size?: 'sm' | 'md' | 'lg';
   animate?: boolean;
+  darkBackground?: boolean;
 }
 
 const variantStyles = {
@@ -33,6 +34,7 @@ export function ProgressBar({
   variant = 'gradient',
   size = 'md',
   animate = true,
+  darkBackground = false,
 }: ProgressBarProps) {
   const percentage = Math.min((value / max) * 100, 100);
 
@@ -40,8 +42,8 @@ export function ProgressBar({
     <div className={cn('w-full', className)}>
       {showLabel && (
         <div className="flex justify-between text-sm font-medium mb-2">
-          <span className="text-foreground">{value} vendidos</span>
-          <span className="text-foreground-muted">{max - value} disponibles</span>
+          <span className={darkBackground ? 'text-white font-bold' : 'text-foreground'}>{value} vendidos</span>
+          <span className={darkBackground ? 'text-secondary font-semibold' : 'text-foreground-muted'}>{max - value} disponibles</span>
         </div>
       )}
       <div className={cn('w-full bg-gray-200 rounded-full overflow-hidden', sizeStyles[size])}>

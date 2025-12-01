@@ -90,6 +90,7 @@ export function HeroSection() {
               max={cuposTotal}
               variant="secondary"
               size="lg"
+              darkBackground
             />
           </motion.div>
 
@@ -114,7 +115,7 @@ export function HeroSection() {
 
           {/* Indicadores de confianza */}
           <motion.div
-            className="flex flex-wrap justify-center gap-4 sm:gap-8 mt-10 text-white/80 text-sm"
+            className="flex flex-wrap justify-center gap-4 sm:gap-8 mt-10 mb-16 text-white/80 text-sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 1.4 }}
@@ -136,15 +137,16 @@ export function HeroSection() {
       </Container>
 
       {/* Onda decorativa inferior */}
-      <div className="absolute bottom-0 left-0 right-0 z-10">
+      <div className="absolute -bottom-px left-0 right-0 z-10 pt-16">
         <svg
-          viewBox="0 0 1440 120"
+          viewBox="0 0 1440 200"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full"
+          className="w-full block h-32 sm:h-40"
+          preserveAspectRatio="none"
         >
           <path
-            d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
+            d="M0 200L60 180C120 160 240 120 360 100C480 80 600 80 720 90C840 100 960 120 1080 130C1200 140 1320 140 1380 140L1440 140V200H1380C1320 200 1200 200 1080 200C960 200 840 200 720 200C600 200 480 200 360 200C240 200 120 200 60 200H0Z"
             fill="white"
           />
         </svg>
