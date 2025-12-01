@@ -1,26 +1,116 @@
 @import "tailwindcss";
 
+/* Colores Mi Crédito 786 */
 :root {
+  /* Colores principales */
+  --primary: #16498C;
+  --primary-light: #1e5ba8;
+  --primary-dark: #0f3366;
+  
+  --secondary: #4BBF52;
+  --secondary-light: #5fd366;
+  --secondary-dark: #3a9940;
+  
+  /* Complementarios */
+  --accent-blue: #2E6EA6;
+  --accent-green: #2F7334;
+  --neutral: #F2F2F2;
+  
+  /* Fondos y texto */
   --background: #ffffff;
-  --foreground: #171717;
+  --background-alt: #F2F2F2;
+  --foreground: #1a1a1a;
+  --foreground-muted: #6b7280;
+  
+  /* Estados */
+  --success: #4BBF52;
+  --error: #dc2626;
+  --warning: #f59e0b;
 }
 
 @theme inline {
+  /* Colores principales */
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
+  
+  --color-secondary: var(--secondary);
+  --color-secondary-light: var(--secondary-light);
+  --color-secondary-dark: var(--secondary-dark);
+  
+  /* Complementarios */
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-green: var(--accent-green);
+  --color-neutral: var(--neutral);
+  
+  /* Fondos y texto */
   --color-background: var(--background);
+  --color-background-alt: var(--background-alt);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-foreground-muted: var(--foreground-muted);
+  
+  /* Estados */
+  --color-success: var(--success);
+  --color-error: var(--error);
+  --color-warning: var(--warning);
+  
+  /* Tipografía */
+  --font-sans: 'Plus Jakarta Sans Variable', 'Inter Variable', system-ui, sans-serif;
+  --font-heading: 'Plus Jakarta Sans Variable', system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Estilos para selección */
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+/* Animación de pulso para botones CTA */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s ease-in-out infinite;
+}
+
+/* Gradiente de texto */
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Sombras personalizadas */
+.shadow-primary {
+  box-shadow: 0 4px 14px 0 rgba(22, 73, 140, 0.25);
+}
+
+.shadow-secondary {
+  box-shadow: 0 4px 14px 0 rgba(75, 191, 82, 0.25);
 }
