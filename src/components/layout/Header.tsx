@@ -81,7 +81,7 @@ export function Header() {
               <Phone className="w-4 h-4" />
               <span>(786) 251-0360</span>
             </a>
-            <a href="https://calendly.com/micredito786-konfia/auditoria-crediticia-gratuita-786" target="_blank" rel="noopener noreferrer">
+            <a href="#agendar">
               <Button variant="cta" size="sm">
                 AGENDA GRATIS
               </Button>
@@ -133,7 +133,7 @@ export function Header() {
                   <Phone className="w-4 h-4" />
                   <span>(786) 251-0360</span>
                 </a>
-                <a href="https://calendly.com/micredito786-konfia/auditoria-crediticia-gratuita-786" target="_blank" rel="noopener noreferrer" className="w-full">
+                <a href="#agendar" className="w-full" onClick={() => setIsMobileMenuOpen(false)}>
                   <Button variant="cta" size="lg" className="w-full">
                     AGENDA TU AUDITORÍA GRATIS
                   </Button>

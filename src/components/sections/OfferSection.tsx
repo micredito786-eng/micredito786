@@ -297,7 +297,7 @@ export function OfferSection() {
               </p>
             </div>
 
-            <a href="https://calendly.com/micredito786-konfia/auditoria-crediticia-gratuita-786" target="_blank" rel="noopener noreferrer" className="w-full">
+            <a href="#agendar" className="w-full">
               <Button
                 variant="cta"
                 size="xl"

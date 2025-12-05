@@ -64,7 +64,7 @@ export function FooterSection() {
 
             <p className="text-2xl font-bold text-secondary mb-6">¿Cuál eliges?</p>
 
-            <a href="https://calendly.com/micredito786-konfia/auditoria-crediticia-gratuita-786" target="_blank" rel="noopener noreferrer">
+            <a href="#agendar">
               <Button
                 variant="cta"
                 size="xl"

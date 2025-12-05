@@ -204,7 +204,7 @@ export function FAQSection() {
           <p className="text-lg text-foreground mb-4">
             ¿Tienes más preguntas? Te las respondemos en tu auditoría gratuita.
           </p>
-          <a href="https://calendly.com/micredito786-konfia/auditoria-crediticia-gratuita-786" target="_blank" rel="noopener noreferrer">
+          <a href="#agendar">
             <Button
               variant="cta"
               size="lg"

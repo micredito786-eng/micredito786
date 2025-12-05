@@ -6,4 +6,5 @@ export { OfferSection } from './OfferSection';
 export { TestimonialsSection } from './TestimonialsSection';
 export { ForWhoSection } from './ForWhoSection';
 export { FAQSection } from './FAQSection';
+export { CalendlySection } from './CalendlySection';
 export { FooterSection } from './FooterSection';

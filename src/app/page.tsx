@@ -7,6 +7,7 @@ import {
   TestimonialsSection,
   ForWhoSection,
   FAQSection,
+  CalendlySection,
   FooterSection,
 } from '@/components/sections';
 import { WhatsAppButton } from '@/components/ui';
@@ -35,6 +36,7 @@ export default function Home() {
         <section id="faq">
           <FAQSection />
         </section>
+        <CalendlySection />
       </main>
       <FooterSection />
       <WhatsAppButton />
