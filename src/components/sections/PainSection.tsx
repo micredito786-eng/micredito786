@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Container, Button, Card } from '@/components/ui';
-import { Play, ArrowRight, XCircle, DollarSign, HeartCrack, ThumbsDown, Eye } from 'lucide-react';
+import { ArrowRight, XCircle, DollarSign, HeartCrack, ThumbsDown, Eye } from 'lucide-react';
 
 export function PainSection() {
   const painPoints = [
@@ -28,20 +28,6 @@ export function PainSection() {
             <div className="absolute top-4 left-6 text-6xl text-primary/20 font-serif">&ldquo;</div>
             
             <div className="relative z-10">
-              {/* Video placeholder */}
-              <div className="relative rounded-xl overflow-hidden mb-8 bg-gray-900 aspect-video flex items-center justify-center group cursor-pointer">
-                <div className="absolute inset-0 bg-linear-to-br from-primary/30 to-accent-blue/30" />
-                <motion.div
-                  className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center"
-                  whileHover={{ scale: 1.1 }}
-                >
-                  <Play className="w-8 h-8 text-primary ml-1" />
-                </motion.div>
-                <p className="absolute bottom-4 left-4 text-white font-medium">
-                  Ver testimonio de Diana M. 🇨🇴
-                </p>
-              </div>
-
               {/* Testimonio escrito */}
               <blockquote className="text-lg text-foreground leading-relaxed mb-6">
                 <p className="mb-4">

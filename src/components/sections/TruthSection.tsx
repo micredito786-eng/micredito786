@@ -116,7 +116,7 @@ export function TruthSection() {
             <p className="text-xl font-bold text-primary mb-6">
               NO en 7 años. EN 45-135 DÍAS.
             </p>
-            <a href="#agendar">
+            <a href="https://pulse.disputeprocess.com/jsp/custom_form.jsp?tab_id=UEVFb0dPMlNnaVlLOGgvLzB4c0RaZz09&add_affiliate=0&cust_type=1&company_id=RlROSXBsY3FIL2tGcWkrL2Y3NFlTQT09&isLinkFromIframe=1" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="cta"
                 size="lg"
