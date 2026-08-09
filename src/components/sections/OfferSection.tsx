@@ -252,7 +252,7 @@ export function OfferSection() {
 
             <div className="bg-primary text-white rounded-2xl p-8 mb-6">
               <p className="text-lg mb-2">NOSOTROS:</p>
-              <p className="text-5xl font-bold mb-2">$499</p>
+              <p className="text-5xl font-bold mb-2">$699</p>
               <p className="text-xl">UNA SOLA VEZ</p>
             </div>
 

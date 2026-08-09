@@ -98,7 +98,7 @@ export function FooterSection() {
 
             <div className="flex flex-wrap justify-center gap-4 text-sm text-white/80">
               <span>⏰ Cupos disponibles: {cuposDisponibles}/{cuposTotal}</span>
-              <span>🔥 Precio actual: $499</span>
+              <span>🔥 Precio actual: $699</span>
               <span>✅ Sin compromiso</span>
             </div>
           </motion.div>

@@ -16,7 +16,7 @@ const testimonials = [
     story: `Llegué de México hace 5 años. Trabajando en construcción logré ahorrar $18,000. 
     Pero mi crédito era 535. Me rechazaron en 4 dealers para un carro. 
     Me querían cobrar 26% de interés. ¡26%! Eso son como $600 al mes por un carro de $20,000.`,
-    result: 'Financié mi carro al 9.5%. Pago $340/mes (ahorro $260/mes = $3,120/año). Los $499 se pagaron solos en 2 meses.',
+    result: 'Financié mi carro al 9.5%. Pago $340/mes (ahorro $260/mes = $3,120/año). Los $699 se pagaron solos en 3 meses.',
     highlight: 'carro nuevo',
   },
   {

@@ -413,7 +413,7 @@ Y muchas NO hacen el trabajo completo.
 NOSOTROS:
 
 ███████████████████████
-█   SOLO $499 HOY   █
+█   SOLO $699 HOY   █
 █   UNA SOLA VEZ    █
 ███████████████████████
 
@@ -516,7 +516,7 @@ Con Mi Crédito 786™:
 - Financié mi carro al 9.5%
 - Pago $340/mes (ahorro $260/mes = $3,120/año)
 
-Los $499 se pagaron solos en 2 meses.
+Los $699 se pagaron solos en 3 meses.
 
 Gracias Alex. Eres un hermano."
 
@@ -835,7 +835,7 @@ ELLOS:
 NOSOTROS:
 - Disputas PERSONALIZADAS escritas para TU caso
 - Promesas LEGALES y realistas
-- $499 UNA VEZ (no mensualidades)
+- $699 UNA VEZ (no mensualidades)
 - Te explicamos TODO paso a paso
 - Proceso documentado
 
@@ -1018,7 +1018,7 @@ Tomar control de tu futuro.
 🇪🇸 Todo en español
 
 ⏰ Cupos disponibles: 47/100
-🔥 Precio actual: $499 (sube a $1500 en cupo 101)
+🔥 Precio actual: $699 (sube a $1500 en cupo 101)
 ✅ Sin compromiso · Sin presión · Sin trucos
 🇺🇸 Servimos todo USA + Puerto Rico 🇵🇷
 
