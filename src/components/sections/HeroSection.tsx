@@ -55,34 +55,15 @@ export function HeroSection() {
             <p>Ya pagaste tus deudas. Ya esperaste años. Ya hiciste &ldquo;todo bien&rdquo;.</p>
           </motion.div>
 
-          {/* Video de YouTube */}
-          <motion.div
-            className="max-w-3xl mx-auto mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            <div className="relative w-full overflow-hidden rounded-xl shadow-2xl" style={{ paddingTop: '56.25%' }}>
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/ZzwkLpktIzY"
-                title="Video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            </div>
-          </motion.div>
-
           <motion.div
             className="text-base sm:text-lg text-white/80 mb-8 space-y-1"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <p>Y cuando aplicaste para esa casa... <span className="text-secondary font-bold">RECHAZADO.</span></p>
-            <p>Cuando quisiste ese carro... <span className="text-secondary font-bold">RECHAZADO.</span></p>
-            <p>Cuando pediste ese préstamo... <span className="text-secondary font-bold">RECHAZADO.</span></p>
+            <p>Y cuando aplicaste para esa casa... <span className="text-red-500 font-bold">RECHAZADO.</span></p>
+            <p>Cuando quisiste ese carro... <span className="text-red-500 font-bold">RECHAZADO.</span></p>
+            <p>Cuando pediste ese préstamo... <span className="text-red-500 font-bold">RECHAZADO.</span></p>
           </motion.div>
 
           <motion.div
