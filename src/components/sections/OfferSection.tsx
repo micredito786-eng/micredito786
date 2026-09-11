@@ -14,7 +14,8 @@ import {
   MessageCircle,
   Users,
   FileText,
-  Phone
+  Phone,
+  Calendar
 } from 'lucide-react';
 
 const cycles = [
@@ -237,7 +238,7 @@ export function OfferSection() {
           </motion.div>
         </div>
 
-        {/* Precio */}
+        {/* Agenda tu evaluación */}
         <motion.div
           className="max-w-2xl mx-auto text-center"
           initial={{ opacity: 0, scale: 0.95 }}
@@ -245,44 +246,83 @@ export function OfferSection() {
           viewport={{ once: true }}
         >
           <Card variant="elevated" padding="lg" className="border-2 border-primary">
-            <p className="text-foreground-muted mb-2">Otras agencias cobran:</p>
-            <p className="text-lg text-foreground line-through mb-4">
-              $99-150/mes × 8 meses = $792 - $1,200
+            <p className="text-foreground-muted mb-2">Otras agencias prometen resultados.</p>
+            <p className="text-lg text-foreground line-through mb-2">
+              Eliminar todo · Subir 100 puntos · Resultados garantizados
+            </p>
+            <p className="text-foreground-muted mb-4">
+              Nosotros te damos algo mejor: una estrategia real.
             </p>
 
-            <div className="bg-primary text-white rounded-2xl p-8 mb-6">
-              <p className="text-lg mb-2">NOSOTROS:</p>
-              <p className="text-5xl font-bold mb-2">$699</p>
-              <p className="text-xl">UNA SOLA VEZ</p>
+            <div className="bg-primary text-white rounded-2xl p-8 mb-6 text-left relative overflow-hidden">
+              <Calendar className="w-10 h-10 text-white/30 absolute top-6 right-6" />
+              <p className="text-sm font-semibold tracking-wide mb-1">AGENDA TU</p>
+              <p className="text-3xl sm:text-4xl font-extrabold mb-3 leading-tight">
+                EVALUACIÓN
+                <br />
+                DE CRÉDITO
+              </p>
+              <p className="text-white/85 mb-6">
+                Descubre qué necesita tu perfil y recibe un plan personalizado.
+              </p>
+              <a href="https://pulse.disputeprocess.com/jsp/custom_form.jsp?tab_id=UEVFb0dPMlNnaVlLOGgvLzB4c0RaZz09&add_affiliate=0&cust_type=1&company_id=RlROSXBsY3FIL2tGcWkrL2Y3NFlTQT09&isLinkFromIframe=1" target="_blank" rel="noopener noreferrer" className="block">
+                <Button
+                  variant="secondary"
+                  size="xl"
+                  className="w-full text-lg"
+                  rightIcon={<ArrowRight className="w-6 h-6" />}
+                >
+                  AGENDA AHORA
+                </Button>
+              </a>
             </div>
 
-            <ul className="text-left space-y-2 mb-6">
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-secondary" />
-                <span>Sin mensualidades</span>
+            <ul className="text-left space-y-4 mb-6">
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-foreground">Análisis completo de tu reporte</p>
+                  <p className="text-sm text-foreground-muted">Revisamos los 3 burós y tu situación actual.</p>
+                </div>
               </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-secondary" />
-                <span>Sin cargos ocultos</span>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-foreground">Estrategia personalizada</p>
+                  <p className="text-sm text-foreground-muted">Te explicamos qué se puede hacer en tu caso.</p>
+                </div>
               </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-secondary" />
-                <span>Sin renovaciones automáticas</span>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-foreground">Servicios y costos claros</p>
+                  <p className="text-sm text-foreground-muted">
+                    Conoces todos los detalles <strong>antes de comenzar</strong>.
+                  </p>
+                </div>
               </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-secondary" />
-                <span>Todo el proceso incluido</span>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-foreground">Sin promesas falsas</p>
+                  <p className="text-sm text-foreground-muted">Trabajamos de forma legal, ética y transparente.</p>
+                </div>
               </li>
             </ul>
 
             <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6">
-              <p className="text-sm text-amber-700 font-semibold mb-3">
-                ⚠️ Este precio es SOLO para los primeros 100 clientes
-              </p>
+              <div className="flex items-center gap-3 mb-3">
+                <Users className="w-6 h-6 text-amber-600 shrink-0" />
+                <div className="text-left">
+                  <p className="text-sm text-amber-700 font-semibold">Cupos limitados esta semana</p>
+                  <p className="text-xs text-foreground-muted">Estamos tomando nuevos clientes para evaluación.</p>
+                </div>
+              </div>
               <ProgressBar value={cuposVendidos} max={cuposTotal} variant="gradient" />
-              <p className="text-xs text-foreground-muted mt-2">
-                Después del cupo #100: Precio regular = $1,500
-              </p>
+              <div className="flex justify-between text-xs text-foreground-muted mt-2">
+                <span>{cuposVendidos} evaluaciones agendadas</span>
+                <span>{cuposTotal - cuposVendidos} cupos disponibles</span>
+              </div>
             </div>
 
             {/* Garantía */}
@@ -292,12 +332,12 @@ export function OfferSection() {
                 <p className="font-bold text-foreground">GARANTÍA DE TRANSPARENCIA TOTAL</p>
               </div>
               <p className="text-sm text-foreground-muted">
-                Si después de tu AUDITORÍA GRATUITA decides que no es para ti: 
+                Si después de tu AUDITORÍA GRATUITA decides que no es para ti:
                 <strong> NO PAGAS NI UN DÓLAR.</strong> Cero presión. Cero trucos.
               </p>
             </div>
 
-            <a href="https://pulse.disputeprocess.com/jsp/custom_form.jsp?tab_id=UEVFb0dPMlNnaVlLOGgvLzB4c0RaZz09&add_affiliate=0&cust_type=1&company_id=RlROSXBsY3FIL2tGcWkrL2Y3NFlTQT09&isLinkFromIframe=1" target="_blank" rel="noopener noreferrer" className="w-full">
+            <a href="https://calendly.com/micredito786-konfia/auditoria-crediticia-gratuita-786" target="_blank" rel="noopener noreferrer" className="w-full">
               <Button
                 variant="cta"
                 size="xl"
