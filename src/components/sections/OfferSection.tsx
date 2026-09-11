@@ -265,7 +265,7 @@ export function OfferSection() {
               <p className="text-white/85 mb-6">
                 Descubre qué necesita tu perfil y recibe un plan personalizado.
               </p>
-              <a href="https://pulse.disputeprocess.com/jsp/custom_form.jsp?tab_id=UEVFb0dPMlNnaVlLOGgvLzB4c0RaZz09&add_affiliate=0&cust_type=1&company_id=RlROSXBsY3FIL2tGcWkrL2Y3NFlTQT09&isLinkFromIframe=1" target="_blank" rel="noopener noreferrer" className="block">
+              <a href="https://calendly.com/micredito786-konfia/auditoria-crediticia-gratuita-786" target="_blank" rel="noopener noreferrer" className="block">
                 <Button
                   variant="secondary"
                   size="xl"
