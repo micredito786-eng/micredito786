@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { GraciasSection } from '@/components/sections';
-import { WhatsAppButton } from '@/components/ui';
 
 export const metadata: Metadata = {
   title: 'Cita Agendada | Mi Crédito 786™',
@@ -13,7 +12,6 @@ export default function GraciasPage() {
       <main>
         <GraciasSection />
       </main>
-      <WhatsAppButton />
     </>
   );
 }

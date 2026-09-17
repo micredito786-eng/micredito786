@@ -5,4 +5,4 @@ export { Badge } from './Badge';
 export { Card, CardHeader, CardContent, CardFooter } from './Card';
 export { ProgressBar } from './ProgressBar';
 export { Accordion } from './Accordion';
-export { WhatsAppButton } from './WhatsAppButton';
+export { ChatbotWidget } from './ChatbotWidget';

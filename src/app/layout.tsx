@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import "@fontsource-variable/plus-jakarta-sans";
+import { ChatbotWidget } from "@/components/ui";
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
     <html lang="es" className="scroll-smooth">
       <body className={`${plusJakarta.variable} font-sans antialiased`}>
         {children}
+        <ChatbotWidget />
       </body>
     </html>
   );

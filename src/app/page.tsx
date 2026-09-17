@@ -10,7 +10,6 @@ import {
   CalendlySection,
   FooterSection,
 } from '@/components/sections';
-import { WhatsAppButton } from '@/components/ui';
 
 export default function Home() {
   return (
@@ -39,7 +38,6 @@ export default function Home() {
         <CalendlySection />
       </main>
       <FooterSection />
-      <WhatsAppButton />
     </>
   );
 }
