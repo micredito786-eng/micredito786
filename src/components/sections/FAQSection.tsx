@@ -102,7 +102,7 @@ const faqItems = [
       <>
         <p className="mb-3">Porque el 90% de &quot;credit repair&quot; son BASURA:</p>
         <p className="mb-3"><strong>ELLOS:</strong> Cartas genéricas, promesas falsas, $99-150/mes indefinido, sin explicaciones.</p>
-        <p className="mb-3"><strong>NOSOTROS:</strong> Disputas PERSONALIZADAS, promesas LEGALES y realistas, $699 UNA VEZ, te explicamos TODO paso a paso.</p>
+        <p className="mb-3"><strong>NOSOTROS:</strong> Disputas PERSONALIZADAS, promesas LEGALES y realistas, pago ÚNICO, te explicamos TODO paso a paso.</p>
         <p>Además: auditoría GRATUITA primero. Si no tiene sentido = NO PAGAS.</p>
       </>
     ),
