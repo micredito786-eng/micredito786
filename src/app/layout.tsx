@@ -3,6 +3,8 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import "@fontsource-variable/plus-jakarta-sans";
 import { ChatbotWidget } from "@/components/ui";
+import { JsonLd } from "@/components/seo";
+import { siteConfig, organizationSchema, websiteSchema } from "@/lib/seo";
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
@@ -10,20 +12,26 @@ const plusJakarta = Plus_Jakarta_Sans({
   display: "swap",
 });
 
+// Valores por defecto del sitio. Cada página define los suyos con createMetadata() de @/lib/seo
 export const metadata: Metadata = {
-  title: "Mi Crédito 786™ | Reparación de Crédito para Latinos en USA",
-  description: "Ayudamos a latinos en USA a reconstruir su crédito de forma legal y profesional. Auditoría gratuita. De 450-600 a 680+ en 90-135 días. Servicio 100% en español.",
-  keywords: "credit repair, reparación de crédito, latinos USA, crédito hispanos, Mi Crédito 786, score de crédito, FCRA, reconstrucción crediticia, Miami",
-  icons: {
-    icon: "/logo.webp",
-    apple: "/logo.webp",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.defaultTitle,
+    template: siteConfig.titleTemplate,
   },
-  openGraph: {
-    title: "Mi Crédito 786™ | Reparación de Crédito para Latinos",
-    description: "La llave que abre las puertas que te han cerrado en USA. Auditoría gratuita. De latinos, para latinos.",
-    type: "website",
-    locale: "es_US",
-    siteName: "Mi Crédito 786",
+  description: siteConfig.description,
+  applicationName: siteConfig.name,
+  authors: [{ name: siteConfig.legalName, url: siteConfig.url }],
+  creator: siteConfig.legalName,
+  publisher: siteConfig.legalName,
+  formatDetection: {
+    telephone: false,
+    email: false,
+    address: false,
+  },
+  icons: {
+    icon: siteConfig.logo,
+    apple: siteConfig.logo,
   },
 };
 
@@ -70,6 +78,7 @@ gtag('config', 'G-6BEQLGVSYT');`,
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <JsonLd schemas={[organizationSchema(), websiteSchema()]} />
         {children}
         <ChatbotWidget />
       </body>

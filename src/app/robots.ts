@@ -1,15 +1,14 @@
 import type { MetadataRoute } from 'next';
-
-const SITE_URL = 'https://micredito786.com';
+import { absoluteUrl, disallowedPaths, siteConfig } from '@/lib/seo';
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: '/gracias',
+      disallow: disallowedPaths,
     },
-    sitemap: `${SITE_URL}/sitemap.xml`,
-    host: SITE_URL,
+    sitemap: absoluteUrl('/sitemap.xml'),
+    host: siteConfig.url,
   };
 }

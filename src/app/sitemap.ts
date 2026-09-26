@@ -1,14 +1,12 @@
 import type { MetadataRoute } from 'next';
+import { absoluteUrl, sitemapPages } from '@/lib/seo';
 
-const SITE_URL = 'https://micredito786.com';
-
+// Las páginas se registran en sitemapPages (src/lib/seo/config.ts)
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: SITE_URL,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1,
-    },
-  ];
+  return sitemapPages.map(({ path, changeFrequency, priority }) => ({
+    url: absoluteUrl(path),
+    lastModified: new Date(),
+    changeFrequency,
+    priority,
+  }));
 }

@@ -1,10 +1,13 @@
-import type { Metadata } from 'next';
 import { GraciasSection } from '@/components/sections';
+import { createMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Cita Agendada | Mi Crédito 786™',
+// Página post-agendamiento: noindex y fuera del sitemap
+export const metadata = createMetadata({
+  title: 'Cita Agendada',
   description: 'Tu auditoría gratuita ha sido agendada correctamente. Mira este video antes de tu cita.',
-};
+  path: '/gracias',
+  noIndex: true,
+});
 
 export default function GraciasPage() {
   return (
