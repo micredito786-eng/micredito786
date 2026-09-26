@@ -64,9 +64,11 @@ type SitemapEntry = {
 /**
  * Páginas indexables. Toda página pública nueva se registra aquí
  * para que aparezca en /sitemap.xml. Las páginas noindex NO van aquí.
+ * Los artículos del blog se agregan solos desde content/blog (ver app/sitemap.ts).
  */
 export const sitemapPages: SitemapEntry[] = [
   { path: '/', changeFrequency: 'monthly', priority: 1 },
+  { path: '/blog', changeFrequency: 'weekly', priority: 0.7 },
 ];
 
 /**

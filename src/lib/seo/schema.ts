@@ -70,6 +70,85 @@ export function webPageSchema({ title, description, path }: WebPageSchemaOptions
   };
 }
 
+type BlogPostingSchemaOptions = {
+  title: string;
+  description: string;
+  path: string;
+  /** Fechas ISO */
+  datePublished: string;
+  dateModified: string;
+  author: string;
+  category: string;
+  keywords: string[];
+  /** Ruta o URL de la imagen principal (portada o imagen OG generada) */
+  image: string;
+  wordCount?: number;
+};
+
+/** Artículo del blog. Reemplaza a webPageSchema en /blog/[slug] */
+export function blogPostingSchema(post: BlogPostingSchemaOptions) {
+  const url = absoluteUrl(post.path);
+  return {
+    '@type': 'BlogPosting',
+    '@id': `${url}/#article`,
+    mainEntityOfPage: url,
+    url,
+    headline: post.title,
+    description: post.description,
+    image: absoluteUrl(post.image),
+    datePublished: post.datePublished,
+    dateModified: post.dateModified,
+    inLanguage: siteConfig.language,
+    articleSection: post.category,
+    keywords: post.keywords.join(', '),
+    ...(post.wordCount && { wordCount: post.wordCount }),
+    author: { '@type': 'Organization', name: post.author, url: siteConfig.url },
+    publisher: { '@id': ORGANIZATION_ID },
+    isPartOf: { '@id': `${absoluteUrl('/blog')}/#blog` },
+  };
+}
+
+type BlogSchemaOptions = {
+  title: string;
+  description: string;
+  path: string;
+  posts: { title: string; path: string; datePublished: string }[];
+};
+
+/** Índice del blog con la lista de artículos */
+export function blogSchema({ title, description, path, posts }: BlogSchemaOptions) {
+  const url = absoluteUrl(path);
+  return {
+    '@type': 'Blog',
+    '@id': `${url}/#blog`,
+    url,
+    name: title,
+    description,
+    inLanguage: siteConfig.language,
+    isPartOf: { '@id': WEBSITE_ID },
+    publisher: { '@id': ORGANIZATION_ID },
+    blogPost: posts.map((post) => ({
+      '@type': 'BlogPosting',
+      '@id': `${absoluteUrl(post.path)}/#article`,
+      headline: post.title,
+      url: absoluteUrl(post.path),
+      datePublished: post.datePublished,
+    })),
+  };
+}
+
+/** Preguntas frecuentes. Las respuestas deben ser texto plano y coincidir con lo visible en la página */
+export function faqPageSchema(faqs: { question: string; answer: string }[]) {
+  return {
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  };
+}
+
 type BreadcrumbItem = { name: string; path: string };
 
 /** Migas de pan para páginas internas (no hace falta en la home) */

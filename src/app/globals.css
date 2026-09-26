@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* Colores Mi Crédito 786 */
 :root {
@@ -22,6 +23,13 @@
   --foreground: #1a1a1a;
   --foreground-muted: #6b7280;
   
+  /* Blog (editorial) */
+  --paper: #F7F6F2;
+  --ink: #0E1B2E;
+  --ink-muted: #4A5568;
+  --line: #E4E1D8;
+  --mint: #E6F4E7;
+
   /* Estados */
   --success: #4BBF52;
   --error: #dc2626;
@@ -49,6 +57,13 @@
   --color-foreground: var(--foreground);
   --color-foreground-muted: var(--foreground-muted);
   
+  /* Blog (editorial) */
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-line: var(--line);
+  --color-mint: var(--mint);
+
   /* Estados */
   --color-success: var(--success);
   --color-error: var(--error);
@@ -57,6 +72,7 @@
   /* Tipografía */
   --font-sans: 'Plus Jakarta Sans Variable', 'Inter Variable', system-ui, sans-serif;
   --font-heading: 'Plus Jakarta Sans Variable', system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, serif;
 }
 
 /* Scroll suave */
@@ -113,4 +129,87 @@ body {
 
 .shadow-secondary {
   box-shadow: 0 4px 14px 0 rgba(75, 191, 82, 0.25);
+}
+
+/* ─── Cuerpo de los artículos del blog (se combina con "prose") ─── */
+.blog-prose {
+  --tw-prose-body: #1f2a3a;
+  --tw-prose-headings: var(--ink);
+  --tw-prose-bold: var(--ink);
+  --tw-prose-links: var(--primary);
+  --tw-prose-bullets: var(--secondary-dark);
+  --tw-prose-counters: var(--primary);
+  line-height: 1.75;
+}
+
+.blog-prose h2 {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 600;
+  font-size: 1.75em;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-top: 2em;
+}
+
+.blog-prose h3 {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.blog-prose a {
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+/* Las citas en markdown (> texto) se muestran como caja "Dato clave" */
+.blog-prose blockquote {
+  border: 0;
+  border-radius: 1.25rem;
+  background: var(--mint);
+  color: #1f4f23;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.95em;
+  padding: 1.25rem 1.5rem;
+}
+
+.blog-prose blockquote p:first-of-type::before,
+.blog-prose blockquote p:last-of-type::after {
+  content: none;
+}
+
+.blog-prose blockquote strong {
+  color: #1f4f23;
+}
+
+.blog-prose table {
+  display: block;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  background: #fff;
+  font-size: 0.9em;
+}
+
+.blog-prose thead {
+  background: var(--primary-dark);
+  border: 0;
+}
+
+.blog-prose thead th {
+  color: #fff;
+  padding: 0.85rem 1.25rem;
+}
+
+.blog-prose tbody td {
+  padding: 0.85rem 1.25rem;
+}
+
+.blog-prose tbody tr:nth-child(even) {
+  background: #faf9f5;
+}
+
+.blog-prose tbody td:first-child {
+  font-weight: 700;
+  color: var(--ink);
 }

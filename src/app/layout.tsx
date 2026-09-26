@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import "@fontsource-variable/plus-jakarta-sans";
 import { ChatbotWidget } from "@/components/ui";
@@ -8,6 +8,13 @@ import { siteConfig, organizationSchema, websiteSchema } from "@/lib/seo";
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+// Serif editorial para los titulares del blog
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
   display: "swap",
 });
@@ -68,7 +75,7 @@ gtag('config', 'G-6BEQLGVSYT');`,
           }}
         />
       </head>
-      <body className={`${plusJakarta.variable} font-sans antialiased`}>
+      <body className={`${plusJakarta.variable} ${fraunces.variable} font-sans antialiased`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

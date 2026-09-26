@@ -71,6 +71,11 @@ Reglas del `page.tsx`:
 - `createMetadata` genera canonical absoluto, Open Graph, Twitter y robots. Opciones extra: `noIndex`, `keywords`, `image`, `socialTitle`, `socialDescription`, `absoluteTitle` (solo home).
 - El schema de organización y sitio web ya lo pone `layout.tsx`: **no** lo repitas.
 - Páginas `noIndex`: no agregues `JsonLd` ni breadcrumb.
+- **Header**: `<Header />` (transparente) solo si la página empieza con un hero oscuro como la home. Si empieza con fondo claro usa `<Header variant="solid" />` y deja espacio arriba en el `<main>` (`pt-28`).
+- **Migas visibles**: `Breadcrumbs` de `@/components/blog` (acepta los mismos items que `breadcrumbSchema`).
+- **Imagen de previsualización generada**: crea `src/app/<ruta>/opengraph-image.tsx` con `renderOgImage({ title, eyebrow })` de `@/lib/seo/og-image` (ver `src/app/blog/opengraph-image.tsx`) y pasa `image: false` a `createMetadata`.
+- **Contenido tipo artículo**: `createMetadata({ ..., article: { publishedTime, modifiedTime, authors, section, tags } })` y `blogPostingSchema` en vez de `webPageSchema`.
+- ¿Es un artículo del blog? **No uses esta skill**: usa `nuevo-articulo-blog` (solo hay que crear un `.md` en `content/blog`).
 
 ### Sección (`<Nombre>Section.tsx`)
 
@@ -80,7 +85,8 @@ Sigue el patrón de las secciones existentes (ej. `FAQSection.tsx`):
 - Animaciones con `framer-motion` (`initial` / `whileInView` / `viewport={{ once: true }}`) → requiere `'use client'`.
 - Títulos de sección con `<h2>`; el `<h1>` solo en la primera sección de la página.
 - Imágenes con `next/image` y `alt` descriptivo.
-- Los CTA que llevan a agendar apuntan a `#agendar` (si la página tiene `CalendlySection`) o a `/#agendar`.
+- Los CTA que llevan a agendar usan `<Link href="/#agendar">` (`next/link`; el linter no permite `<a>` hacia `/`).
+- Contenido que Google debe leer (FAQs, acordeones) tiene que estar en el HTML inicial: usa `<details>/<summary>` como `PostFaqs`, no el `Accordion` de `@/components/ui` (no renderiza las respuestas cerradas).
 
 ## 3. Registrar en SEO
 
@@ -88,7 +94,7 @@ Sigue el patrón de las secciones existentes (ej. `FAQSection.tsx`):
   ```ts
   { path: '/reparacion-de-credito-miami', changeFrequency: 'monthly', priority: 0.8 },
   ```
-  Prioridad: home 1, páginas de servicio 0.8, contenido/blog 0.6, legales 0.3.
+  Prioridad: home 1, páginas de servicio 0.8, índice del blog 0.7, artículos 0.6 (se agregan solos), legales 0.3.
 - **noIndex** → NO la agregues al sitemap ni a `disallowedPaths` (si robots.txt la bloquea, Google no ve el noindex).
 - Datos de marca, contacto, dirección, horario o redes: solo se cambian en `siteConfig` (`src/lib/seo/config.ts`).
 

@@ -7,16 +7,24 @@ import { Menu, X, Phone } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+// Con "/" delante para que funcionen también desde otras páginas (blog, etc.)
 const navLinks = [
-  { href: '#dolor', label: 'El Problema' },
-  { href: '#verdad', label: 'La Verdad' },
-  { href: '#oferta', label: 'El Plan' },
-  { href: '#testimonios', label: 'Testimonios' },
-  { href: '#faq', label: 'FAQ' },
+  { href: '/#dolor', label: 'El Problema' },
+  { href: '/#verdad', label: 'La Verdad' },
+  { href: '/#oferta', label: 'El Plan' },
+  { href: '/#testimonios', label: 'Testimonios' },
+  { href: '/#faq', label: 'FAQ' },
+  { href: '/blog', label: 'Blog' },
 ];
 
-export function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
+interface HeaderProps {
+  /** "solid" = fondo blanco desde el inicio, para páginas sin hero oscuro (blog, legales...) */
+  variant?: 'transparent' | 'solid';
+}
+
+export function Header({ variant = 'transparent' }: HeaderProps) {
+  const [hasScrolled, setIsScrolled] = useState(false);
+  const isScrolled = variant === 'solid' || hasScrolled;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -81,11 +89,11 @@ export function Header() {
               <Phone className="w-4 h-4" />
               <span>+1 (786) 636-7631</span>
             </a>
-            <a href="#agendar">
+            <Link href="/#agendar">
               <Button variant="cta" size="sm">
                 AGENDA GRATIS
               </Button>
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -133,11 +141,11 @@ export function Header() {
                   <Phone className="w-4 h-4" />
                   <span>+1 (786) 636-7631</span>
                 </a>
-                <a href="#agendar" className="w-full" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link href="/#agendar" className="w-full" onClick={() => setIsMobileMenuOpen(false)}>
                   <Button variant="cta" size="lg" className="w-full">
                     AGENDA TU AUDITORÍA GRATIS
                   </Button>
-                </a>
+                </Link>
               </div>
             </Container>
           </motion.div>

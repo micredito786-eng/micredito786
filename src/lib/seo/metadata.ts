@@ -1,6 +1,15 @@
 import type { Metadata } from 'next';
 import { absoluteUrl, siteConfig } from './config';
 
+type ArticleOptions = {
+  /** Fechas ISO */
+  publishedTime: string;
+  modifiedTime: string;
+  authors: string[];
+  section: string;
+  tags: string[];
+};
+
 type CreateMetadataOptions = {
   /** Meta título (máx. ~60 caracteres). Se le agrega "| Mi Crédito 786™" salvo que absoluteTitle sea true */
   title: string;
@@ -14,10 +23,15 @@ type CreateMetadataOptions = {
   /** Título/descripción distintos para redes sociales (Open Graph y Twitter). Por defecto los mismos */
   socialTitle?: string;
   socialDescription?: string;
-  /** Imagen para redes sociales. Por defecto siteConfig.ogImage */
-  image?: string;
+  /**
+   * Imagen para redes sociales. Por defecto siteConfig.ogImage.
+   * false = la ruta tiene su propio opengraph-image.tsx (imagen generada), no se declara aquí
+   */
+  image?: string | false;
   /** true para páginas que no deben aparecer en Google (gracias, confirmaciones, etc.) */
   noIndex?: boolean;
+  /** Datos de artículo: cambia og:type a "article" y agrega fechas, autor, sección y etiquetas */
+  article?: ArticleOptions;
 };
 
 /**
@@ -34,10 +48,23 @@ export function createMetadata({
   socialDescription,
   image = siteConfig.ogImage,
   noIndex = false,
+  article,
 }: CreateMetadataOptions): Metadata {
   const url = absoluteUrl(path);
   const ogTitle = socialTitle ?? (absoluteTitle ? title : siteConfig.titleTemplate.replace('%s', title));
   const ogDescription = socialDescription ?? description;
+  const images = image ? [{ url: image, alt: ogTitle }] : undefined;
+  // Imagen propia (generada o de portada) = tarjeta grande; logo = tarjeta pequeña
+  const largeImage = image !== siteConfig.ogImage;
+
+  const baseOpenGraph = {
+    title: ogTitle,
+    description: ogDescription,
+    url,
+    siteName: siteConfig.name,
+    locale: siteConfig.locale,
+    ...(images && { images }),
+  };
 
   return {
     title: absoluteTitle ? { absolute: title } : title,
@@ -46,23 +73,17 @@ export function createMetadata({
     alternates: {
       canonical: url,
     },
-    openGraph: {
-      title: ogTitle,
-      description: ogDescription,
-      url,
-      siteName: siteConfig.name,
-      locale: siteConfig.locale,
-      type: 'website',
-      images: [{ url: image, alt: siteConfig.name }],
-    },
+    openGraph: article
+      ? { ...baseOpenGraph, type: 'article', ...article }
+      : { ...baseOpenGraph, type: 'website' },
     twitter: {
-      card: 'summary',
+      card: largeImage ? 'summary_large_image' : 'summary',
       title: ogTitle,
       description: ogDescription,
-      images: [image],
+      ...(images && { images: images.map((i) => i.url) }),
     },
     robots: noIndex
       ? { index: false, follow: false }
-      : { index: true, follow: true },
+      : { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   };
 }
