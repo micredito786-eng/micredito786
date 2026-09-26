@@ -21,7 +21,7 @@ summary:
   - "La ley FCRA garantiza tu derecho a la exactitud, privacidad y acceso gratuito a tus reportes de crédito."
   - "Los bureaus tienen generalmente 30 días para investigar cualquier disputa formal presentada por el consumidor."
   - "La mayoría de datos negativos deben ser eliminados de tus reportes tras cumplir 7 años desde la mora inicial."
-draft: true
+draft: false
 faqs:
   - question: "¿Qué significa la sigla FCRA en español?"
     answer: "Corresponde a la Fair Credit Reporting Act (Ley de Informes Justos de Crédito), legislación federal aprobada en 1970 para regular cómo las agencias de informes crediticios manejan, comparten y verifican los datos de los consumidores en EE.UU."

@@ -20,7 +20,7 @@ summary:
   - "El reporte es tu historial detallado; el score es el número que se calcula a partir de él."
   - "Equifax, Experian y TransUnion operan de forma independiente: debes auditar los tres."
   - "La ley federal FCRA te otorga el derecho de disputar cualquier dato inexacto de forma gratuita."
-draft: true
+draft: false
 faqs:
   - question: "¿Cada cuánto puedo ver mi reporte de crédito gratis?"
     answer: "Puedes descargar tus reportes oficiales de Equifax, Experian y TransUnion sin costo en AnnualCreditReport.com, la plataforma federal autorizada. Actualmente, los tres bureaus permiten consultas semanales gratuitas."

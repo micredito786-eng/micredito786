@@ -21,7 +21,7 @@ summary:
   - "El puntaje FICO y VantageScore oscilan entre 300 y 850 puntos, reflejando tu solvencia ante prestamistas."
   - "El historial de pagos puntuales (35%) y el ratio de utilización de crédito (30%) representan el 65% de tu puntuación."
   - "La mejora crediticia requiere constancia en tus hábitos: ningún método puede garantizar subidas inmediatas."
-draft: true
+draft: false
 faqs:
   - question: "¿Cuál es un buen score de crédito para comprar casa o auto en Estados Unidos?"
     answer: "Un puntaje FICO a partir de 670 se considera bueno, mientras que superar los 740 puntos permite acceder a las tasas de interés preferenciales del mercado, reduciendo drásticamente las mensualidades en hipotecas y préstamos automotrices."

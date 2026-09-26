@@ -20,7 +20,7 @@ summary:
   - "Mantén tu ratio de utilización crediticia por debajo del 30%, y preferiblemente bajo el 10% para puntajes óptimos."
   - "Diferencia la fecha de corte (cuando se reporta el saldo) de la fecha límite de pago (cuando vence tu factura)."
   - "Pagar el balance total cada mes te permite generar historial positivo sin pagar un solo dólar en intereses."
-draft: true
+draft: false
 faqs:
   - question: "¿Es verdad que dejar una pequeña deuda cada mes ayuda a subir el score?"
     answer: "Es un mito completamente falso. Mantener un saldo acumulado no incrementa tu puntuación en absoluto y solo genera intereses elevados a favor del banco emisor. Puedes liquidar el balance total cada mes y recibir la máxima calificación de pago puntual."

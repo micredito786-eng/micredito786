@@ -20,7 +20,7 @@ summary:
   - "Un collection surge cuando un acreedor transfiere o vende una deuda vencida a una agencia de cobranzas."
   - "Esta marca puede reducir tu puntaje drásticamente y permanecer hasta 7 años en tus reportes."
   - "Bajo la ley federal FDCPA tienes derecho a exigir una carta de validación de la deuda por escrito."
-draft: true
+draft: false
 faqs:
   - question: "¿Pagar un collection lo elimina inmediatamente de mi reporte de crédito?"
     answer: "Por regla general, pagar una cuenta en cobranza actualiza su estatus a collection pagado (paid collection) con saldo en cero, pero la marca histórica puede permanecer en tu reporte hasta que se cumplan los 7 años reglamentarios, salvo que se logre un acuerdo voluntario de eliminación con el cobrador."

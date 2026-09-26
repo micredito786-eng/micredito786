@@ -20,7 +20,7 @@ summary:
   - "Un presupuesto realista es el cimiento para blindar tus pagos a tiempo y proteger tu puntaje de crédito."
   - "El esquema 50/30/20 distribuye tus ingresos netos entre necesidades básicas, estilo de vida y metas de ahorro o deuda."
   - "Crear un fondo de emergencia inicial de $1,000 evita que imprevistos cotidianos te obliguen a endeudarte."
-draft: true
+draft: false
 faqs:
   - question: "¿Por qué un presupuesto mensual es clave para mejorar mi crédito?"
     answer: "Porque el historial de pagos representa el 35% de tu puntaje de crédito. Un presupuesto bien estructurado garantiza que siempre tengas asignados los fondos necesarios para cubrir los pagos mínimos a tiempo, evitando marcas negativas por morosidad."
