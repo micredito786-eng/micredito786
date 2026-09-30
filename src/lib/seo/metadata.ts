@@ -28,6 +28,10 @@ type CreateMetadataOptions = {
    * false = la ruta tiene su propio opengraph-image.tsx (imagen generada), no se declara aquí
    */
   image?: string | false;
+  /** Texto alternativo de la imagen social. Por defecto el título */
+  imageAlt?: string;
+  /** Medidas de la imagen social (ej. ogImageSize para las portadas 1200x630) */
+  imageSize?: { width: number; height: number };
   /** true para páginas que no deben aparecer en Google (gracias, confirmaciones, etc.) */
   noIndex?: boolean;
   /** Datos de artículo: cambia og:type a "article" y agrega fechas, autor, sección y etiquetas */
@@ -47,13 +51,15 @@ export function createMetadata({
   socialTitle,
   socialDescription,
   image = siteConfig.ogImage,
+  imageAlt,
+  imageSize,
   noIndex = false,
   article,
 }: CreateMetadataOptions): Metadata {
   const url = absoluteUrl(path);
   const ogTitle = socialTitle ?? (absoluteTitle ? title : siteConfig.titleTemplate.replace('%s', title));
   const ogDescription = socialDescription ?? description;
-  const images = image ? [{ url: image, alt: ogTitle }] : undefined;
+  const images = image ? [{ url: image, alt: imageAlt ?? ogTitle, ...imageSize }] : undefined;
   // Imagen propia (generada o de portada) = tarjeta grande; logo = tarjeta pequeña
   const largeImage = image !== siteConfig.ogImage;
 
@@ -80,7 +86,7 @@ export function createMetadata({
       card: largeImage ? 'summary_large_image' : 'summary',
       title: ogTitle,
       description: ogDescription,
-      ...(images && { images: images.map((i) => i.url) }),
+      ...(images && { images }),
     },
     robots: noIndex
       ? { index: false, follow: false }

@@ -40,8 +40,10 @@ export async function generateMetadata({ params }: PageProps) {
     description: post.description,
     path: post.path,
     keywords: post.keywords.length > 0 ? post.keywords : post.tags,
-    // La previsualización la genera ./opengraph-image.tsx
-    image: false,
+    // Portada en JPG 1200x630 (scripts/generate-og-images.mjs)
+    image: post.ogImage,
+    imageAlt: post.imageAlt,
+    imageSize: { width: 1200, height: 630 },
     noIndex: post.draft,
     article: {
       publishedTime: post.date,

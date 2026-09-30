@@ -33,6 +33,8 @@ export type PostSummary = {
   /** Portada en public/blog/<slug>/ (obligatoria) */
   image: string;
   imageAlt: string;
+  /** Previsualización JPG 1200x630 junto a la portada (la genera scripts/generate-og-images.mjs) */
+  ogImage: string;
   faqs: PostFaq[];
   /** Puntos del recuadro "Resumen en 30 segundos" */
   summary: string[];
@@ -133,6 +135,7 @@ function parseFile(file: string) {
     keywords: Array.isArray(data.keywords) ? data.keywords.map(String) : [],
     image,
     imageAlt,
+    ogImage: path.posix.join(path.posix.dirname(image), 'og.jpg'),
     faqs,
     summary: Array.isArray(data.summary) ? data.summary.map((item: unknown) => String(item).trim()) : [],
     startHere,
