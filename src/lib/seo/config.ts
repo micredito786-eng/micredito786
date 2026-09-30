@@ -59,6 +59,8 @@ type SitemapEntry = {
   path: string;
   changeFrequency: NonNullable<MetadataRoute.Sitemap[number]['changeFrequency']>;
   priority: number;
+  /** Fecha (AAAA-MM-DD) del último cambio real de contenido; actualízala al editar la página */
+  lastModified?: string;
 };
 
 /**
@@ -67,7 +69,7 @@ type SitemapEntry = {
  * Los artículos del blog se agregan solos desde content/blog (ver app/sitemap.ts).
  */
 export const sitemapPages: SitemapEntry[] = [
-  { path: '/', changeFrequency: 'monthly', priority: 1 },
+  { path: '/', changeFrequency: 'monthly', priority: 1, lastModified: '2026-09-26' },
   { path: '/blog', changeFrequency: 'weekly', priority: 0.7 },
 ];
 
