@@ -36,13 +36,13 @@ export function HeroSection() {
 
           {/* Headline principal */}
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-8 leading-tight"
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-8 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            ¿Cuántas veces más vas a escuchar{' '}
-            <span className="text-secondary">&ldquo;NO&rdquo;</span>?
+            ¿Te Negaron Ese Préstamo Que Necesitabas Por Tu{' '}
+            <span className="text-secondary">Mal Crédito</span>?
           </motion.h1>
 
           {/* Video de YouTube */}
@@ -71,27 +71,16 @@ export function HeroSection() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <p>Ya pagaste tus deudas. Ya esperaste años. Ya hiciste &ldquo;todo bien&rdquo;.</p>
-          </motion.div>
-
-          <motion.div
-            className="text-base sm:text-lg text-white/80 mb-8 space-y-1"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <p>Y cuando aplicaste para esa casa... <span className="text-red-500 font-bold">RECHAZADO.</span></p>
-            <p>Cuando quisiste ese carro... <span className="text-red-500 font-bold">RECHAZADO.</span></p>
-            <p>Cuando pediste ese préstamo... <span className="text-red-500 font-bold">RECHAZADO.</span></p>
+            <p>Dame 5 Minutos Y Te Mostraré Cómo Empezar A Reparar Tu Crédito.</p>
+            <p>Para Que No Te Sigan Cerrando Las Puertas.</p>
           </motion.div>
 
           <motion.div
             className="text-lg sm:text-xl font-semibold text-white mb-10"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <p className="mb-2">NO porque no tengas dinero. NO porque no trabajes duro.</p>
             <p className="text-secondary text-xl sm:text-2xl">
               PORQUE NADIE TE ENSEÑÓ A ARREGLAR LO QUE REALMENTE IMPORTA.
             </p>
