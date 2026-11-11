@@ -76,13 +76,13 @@ export function FooterSection() {
             </a>
 
             <div className="flex flex-wrap justify-center gap-6 text-sm mb-8">
-              <a href="tel:+17866367631" className="flex items-center gap-2 hover:text-secondary transition-colors">
+              <a href="tel:+17867551243" className="flex items-center gap-2 hover:text-secondary transition-colors">
                 <Phone className="w-4 h-4" />
-                <span>+1 (786) 636-7631</span>
+                <span>+1 (786) 755-1243</span>
               </a>
-              <a href="https://wa.me/17866367631" className="flex items-center gap-2 hover:text-secondary transition-colors">
+              <a href="https://wa.me/13502008330" className="flex items-center gap-2 hover:text-secondary transition-colors">
                 <MessageCircle className="w-4 h-4" />
-                <span>WhatsApp: +1 (786) 636-7631</span>
+                <span>WhatsApp: +1 (350) 200-8330</span>
               </a>
             </div>
 
@@ -180,11 +180,11 @@ export function FooterSection() {
               <ul className="space-y-3 text-white/70 text-sm">
                 <li className="flex items-center gap-2">
                   <Phone className="w-4 h-4" />
-                  <a href="tel:+17866367631" className="hover:text-white transition-colors">+1 (786) 636-7631</a>
+                  <a href="tel:+17867551243" className="hover:text-white transition-colors">+1 (786) 755-1243</a>
                 </li>
                 <li className="flex items-center gap-2">
                   <MessageCircle className="w-4 h-4" />
-                  <a href="https://wa.me/17866367631" className="hover:text-white transition-colors">WhatsApp: +1 (786) 636-7631</a>
+                  <a href="https://wa.me/13502008330" className="hover:text-white transition-colors">WhatsApp: +1 (350) 200-8330</a>
                 </li>
                 <li className="flex items-center gap-2">
                   <MapPin className="w-4 h-4" />

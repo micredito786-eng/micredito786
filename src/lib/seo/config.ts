@@ -31,9 +31,9 @@ export const siteConfig = {
   ogImage: '/logo.webp',
   logo: '/logo.webp',
   contact: {
-    phone: '+1-786-636-7631',
+    phone: '+1-786-755-1243',
     email: 'micredito786@konfia.io',
-    whatsapp: 'https://wa.me/17866367631',
+    whatsapp: 'https://wa.me/13502008330',
   },
   address: {
     streetAddress: '420 SW 7th ST Suite 907',

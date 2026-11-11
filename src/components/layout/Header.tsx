@@ -79,7 +79,7 @@ export function Header({ variant = 'transparent' }: HeaderProps) {
           {/* CTA y teléfono */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:+17866367631"
+              href="tel:+17867551243"
               className={`flex items-center gap-2 text-sm font-medium transition-colors ${
                 isScrolled
                   ? 'text-foreground hover:text-primary'
@@ -87,7 +87,7 @@ export function Header({ variant = 'transparent' }: HeaderProps) {
               }`}
             >
               <Phone className="w-4 h-4" />
-              <span>+1 (786) 636-7631</span>
+              <span>+1 (786) 755-1243</span>
             </a>
             <Link href="/#agendar">
               <Button variant="cta" size="sm">
@@ -135,11 +135,11 @@ export function Header({ variant = 'transparent' }: HeaderProps) {
                 ))}
                 <hr className="my-4" />
                 <a
-                  href="tel:+17866367631"
+                  href="tel:+17867551243"
                   className="flex items-center gap-2 text-foreground py-2"
                 >
                   <Phone className="w-4 h-4" />
-                  <span>+1 (786) 636-7631</span>
+                  <span>+1 (786) 755-1243</span>
                 </a>
                 <Link href="/#agendar" className="w-full" onClick={() => setIsMobileMenuOpen(false)}>
                   <Button variant="cta" size="lg" className="w-full">
