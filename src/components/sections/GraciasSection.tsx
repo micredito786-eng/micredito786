@@ -31,7 +31,7 @@ export function GraciasSection() {
     <>
       {/* Header con confirmación */}
       <section className="relative bg-linear-to-br from-primary via-primary to-accent-blue text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-72 h-72 bg-secondary rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-10 w-96 h-96 bg-accent-blue rounded-full blur-3xl" />
         </div>
@@ -79,7 +79,7 @@ export function GraciasSection() {
         </Container>
 
         {/* Onda decorativa inferior */}
-        <div className="absolute -bottom-px left-0 right-0">
+        <div aria-hidden="true" className="pointer-events-none absolute -bottom-px left-0 right-0">
           <svg
             viewBox="0 0 1440 120"
             fill="none"
@@ -160,7 +160,7 @@ export function GraciasSection() {
             className="max-w-3xl mx-auto mt-6"
           >
             <div className="bg-linear-to-br from-primary to-accent-blue rounded-2xl p-8 sm:p-10 text-center text-white relative overflow-hidden">
-              <div className="absolute inset-0 opacity-10">
+              <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-10">
                 <div className="absolute -top-10 -right-10 w-56 h-56 bg-secondary rounded-full blur-3xl" />
               </div>
               <div className="relative z-10">

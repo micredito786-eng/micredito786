@@ -11,7 +11,7 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-linear-to-br from-primary/95 via-primary/90 to-accent-blue/95" />
         {/* Patrón decorativo */}
-        <div className="absolute inset-0 opacity-10">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-secondary rounded-full blur-3xl" />
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-blue rounded-full blur-3xl" />
         </div>
@@ -107,7 +107,7 @@ export function HeroSection() {
       </Container>
 
       {/* Onda decorativa inferior */}
-      <div className="absolute -bottom-px left-0 right-0 z-10 pt-16">
+      <div aria-hidden="true" className="pointer-events-none absolute -bottom-px left-0 right-0 z-10 pt-16">
         <svg
           viewBox="0 0 1440 200"
           fill="none"

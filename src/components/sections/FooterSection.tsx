@@ -12,7 +12,7 @@ export function FooterSection() {
       {/* CTA Final */}
       <section className="py-20 relative overflow-hidden">
         {/* Decoración */}
-        <div className="absolute inset-0 opacity-10">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-10">
           <div className="absolute top-10 right-10 w-64 h-64 bg-secondary rounded-full blur-3xl" />
           <div className="absolute bottom-10 left-10 w-96 h-96 bg-accent-blue rounded-full blur-3xl" />
         </div>
