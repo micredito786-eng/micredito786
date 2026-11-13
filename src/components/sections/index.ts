@@ -10,3 +10,4 @@ export { CalendlySection } from './CalendlySection';
 export { FooterSection } from './FooterSection';
 export { GraciasSection } from './GraciasSection';
 export { TerminosSection } from './TerminosSection';
+export { PrivacidadSection } from './PrivacidadSection';

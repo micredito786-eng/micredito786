@@ -8,7 +8,7 @@ export const siteConfig = {
   url: 'https://micredito786.com',
   name: 'Mi Crédito 786',
   brand: 'Mi Crédito 786™',
-  legalName: 'Konfia Corp.',
+  legalName: 'KONFIA Corp',
   locale: 'es_US',
   language: 'es',
   /** Se usa cuando una página no define su propio título */
@@ -16,7 +16,7 @@ export const siteConfig = {
   /** Plantilla para los títulos de páginas internas: "Título | Mi Crédito 786™" */
   titleTemplate: '%s | Mi Crédito 786™',
   description:
-    'Ayudamos a latinos en USA a reconstruir su crédito de forma legal y profesional. Auditoría gratuita. De 450-600 a 680+ en 90-135 días. Servicio 100% en español.',
+    'Ayudamos a latinos en USA a entender y corregir errores en su reporte de crédito, de forma legal y en español. Auditoría gratuita y sin compromiso.',
   keywords: [
     'credit repair',
     'reparación de crédito',
@@ -72,6 +72,7 @@ export const sitemapPages: SitemapEntry[] = [
   { path: '/', changeFrequency: 'monthly', priority: 1, lastModified: '2026-09-26' },
   { path: '/blog', changeFrequency: 'weekly', priority: 0.7 },
   { path: '/terminos-y-condiciones', changeFrequency: 'yearly', priority: 0.3, lastModified: '2026-11-11' },
+  { path: '/politica-de-privacidad', changeFrequency: 'yearly', priority: 0.3, lastModified: '2026-11-12' },
 ];
 
 /**

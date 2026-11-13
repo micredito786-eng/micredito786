@@ -1,6 +1,7 @@
 'use client';
 
 import Script from 'next/script';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Container } from '@/components/ui';
 import { Calendar, Clock, CheckCircle, Shield } from 'lucide-react';
@@ -79,7 +80,11 @@ export function CalendlySection() {
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
         >
-          🔒 <strong className="text-primary font-bold">Tu información está segura.</strong> No vendemos tus datos. Ver Política de Privacidad.
+          🔒 <strong className="text-primary font-bold">Tu información está segura.</strong> No vendemos tus datos. Ver{' '}
+          <Link href="/politica-de-privacidad" className="text-primary underline underline-offset-2 hover:text-secondary">
+            Política de Privacidad
+          </Link>
+          .
         </motion.p>
       </Container>
     </section>
