@@ -172,15 +172,15 @@ export function ForWhoSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <a href="https://api.leadconnectorhq.com/widget/form/xwCKMIZkUP3AdUAFpRsj" target="_blank" rel="noopener noreferrer">
-            <Button
-              variant="cta"
-              size="lg"
-              rightIcon={<ArrowRight className="w-5 h-5" />}
-            >
-              SÍ, QUIERO TRABAJAR CON USTEDES
-            </Button>
-          </a>
+          <Button
+            href="https://api.leadconnectorhq.com/widget/form/xwCKMIZkUP3AdUAFpRsj"
+            newTab
+            variant="cta"
+            size="lg"
+            rightIcon={<ArrowRight className="w-5 h-5" />}
+          >
+            SÍ, QUIERO TRABAJAR CON USTEDES
+          </Button>
           <p className="text-foreground-muted text-sm mt-3">
             En español · Auditoría gratis · Sin compromiso
           </p>

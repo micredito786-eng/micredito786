@@ -137,15 +137,15 @@ export function TruthSection() {
             <p className="text-lg font-semibold text-primary mb-6 max-w-xl mx-auto">
               Trabajamos en ciclos de 45 días. Muchos clientes ven cambios en 45 a 135 días. Cada caso es diferente y no garantizamos resultados.
             </p>
-            <a href="https://api.leadconnectorhq.com/widget/form/xwCKMIZkUP3AdUAFpRsj" target="_blank" rel="noopener noreferrer">
-              <Button
-                variant="cta"
-                size="lg"
-                rightIcon={<ArrowRight className="w-5 h-5" />}
-              >
-                MUÉSTRAME CÓMO FUNCIONA
-              </Button>
-            </a>
+            <Button
+              href="https://api.leadconnectorhq.com/widget/form/xwCKMIZkUP3AdUAFpRsj"
+              newTab
+              variant="cta"
+              size="lg"
+              rightIcon={<ArrowRight className="w-5 h-5" />}
+            >
+              MUÉSTRAME CÓMO FUNCIONA
+            </Button>
             <p className="text-sm text-foreground-muted mt-3">
               En español · Auditoría gratis · Sin compromiso
             </p>

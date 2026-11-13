@@ -89,11 +89,9 @@ export function Header({ variant = 'transparent' }: HeaderProps) {
               <Phone className="w-4 h-4" />
               <span>+1 (786) 755-1243</span>
             </a>
-            <Link href="/#agendar">
-              <Button variant="cta" size="sm">
-                AGENDA GRATIS
-              </Button>
-            </Link>
+            <Button href="/#agendar" variant="cta" size="sm">
+              AGENDA GRATIS
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -141,11 +139,15 @@ export function Header({ variant = 'transparent' }: HeaderProps) {
                   <Phone className="w-4 h-4" />
                   <span>+1 (786) 755-1243</span>
                 </a>
-                <Link href="/#agendar" className="w-full" onClick={() => setIsMobileMenuOpen(false)}>
-                  <Button variant="cta" size="lg" className="w-full">
-                    AGENDA TU AUDITORÍA GRATIS
-                  </Button>
-                </Link>
+                <Button
+                  href="/#agendar"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  variant="cta"
+                  size="lg"
+                  className="w-full"
+                >
+                  AGENDA TU AUDITORÍA GRATIS
+                </Button>
               </div>
             </Container>
           </motion.div>

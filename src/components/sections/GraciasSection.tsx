@@ -171,16 +171,16 @@ export function GraciasSection() {
                 <p className="text-white/85 mb-6">
                   Haz clic abajo y sácalo en menos de 5 minutos.
                 </p>
-                <a href={REPORTE_URL} target="_blank" rel="noopener noreferrer">
-                  <Button
-                    variant="secondary"
-                    size="xl"
-                    className="px-8 sm:px-10"
-                    rightIcon={<ArrowRight className="w-5 h-5" />}
-                  >
-                    Sacar mi reporte de crédito
-                  </Button>
-                </a>
+                <Button
+                  href={REPORTE_URL}
+                  newTab
+                  variant="secondary"
+                  size="xl"
+                  className="px-8 sm:px-10"
+                  rightIcon={<ArrowRight className="w-5 h-5" />}
+                >
+                  Sacar mi reporte de crédito
+                </Button>
                 <p className="text-white/60 text-xs mt-3">
                   Sácalo, toma menos de 5 minutos.
                 </p>

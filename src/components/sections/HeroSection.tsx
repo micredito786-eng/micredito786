@@ -89,16 +89,16 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.2 }}
           >
-            <a href="https://api.leadconnectorhq.com/widget/form/xwCKMIZkUP3AdUAFpRsj" target="_blank" rel="noopener noreferrer">
-              <Button
-                variant="cta"
-                size="xl"
-                className="text-lg sm:text-xl px-8 sm:px-12 py-5 sm:py-6"
-                rightIcon={<ArrowRight className="w-6 h-6" />}
-              >
-                QUIERO MI AUDITORÍA GRATIS
-              </Button>
-            </a>
+            <Button
+              href="https://api.leadconnectorhq.com/widget/form/xwCKMIZkUP3AdUAFpRsj"
+              newTab
+              variant="cta"
+              size="xl"
+              className="text-lg sm:text-xl px-8 sm:px-12 py-5 sm:py-6"
+              rightIcon={<ArrowRight className="w-6 h-6" />}
+            >
+              QUIERO MI AUDITORÍA GRATIS
+            </Button>
             <p className="text-white/70 mt-4 text-sm">
               En español · Auditoría gratis · Sin compromiso
             </p>

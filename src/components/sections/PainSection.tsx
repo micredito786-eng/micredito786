@@ -129,15 +129,14 @@ export function PainSection() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <p className="text-3xl font-bold text-primary mb-6">¿HASTA CUÁNDO?</p>
-          <a href="#agendar">
-            <Button
-              variant="cta"
-              size="lg"
-              rightIcon={<ArrowRight className="w-5 h-5" />}
-            >
-              QUIERO SALIR DE ESTO YA
-            </Button>
-          </a>
+          <Button
+            href="#agendar"
+            variant="cta"
+            size="lg"
+            rightIcon={<ArrowRight className="w-5 h-5" />}
+          >
+            QUIERO SALIR DE ESTO YA
+          </Button>
           <p className="text-foreground-muted text-sm mt-3">
             En español · Auditoría gratis · Sin compromiso
           </p>

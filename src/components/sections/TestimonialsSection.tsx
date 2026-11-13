@@ -164,15 +164,14 @@ export function TestimonialsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <a href="#agendar">
-            <Button
-              variant="cta"
-              size="lg"
-              rightIcon={<ArrowRight className="w-5 h-5" />}
-            >
-              QUIERO RESULTADOS COMO ESTOS
-            </Button>
-          </a>
+          <Button
+            href="#agendar"
+            variant="cta"
+            size="lg"
+            rightIcon={<ArrowRight className="w-5 h-5" />}
+          >
+            QUIERO RESULTADOS COMO ESTOS
+          </Button>
           <p className="text-foreground-muted text-sm mt-3">
             En español · Auditoría gratis · Sin compromiso
           </p>

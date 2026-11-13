@@ -2,7 +2,10 @@
 
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { type ReactNode } from 'react';
+
+const MotionLink = motion.create(Link);
 
 type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'cta';
 type ButtonSize = 'sm' | 'md' | 'lg' | 'xl';
@@ -19,6 +22,14 @@ interface ButtonProps {
   disabled?: boolean;
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
+  /**
+   * Si se pasa, el botón se dibuja como UN SOLO enlace (no <a><button/></a>,
+   * que es HTML inválido y hace que algunos clics no naveguen).
+   * Rutas internas ("/#agendar", "#agendar") usan next/link; las externas, <a>.
+   */
+  href?: string;
+  /** Abre el enlace en una pestaña nueva (agrega rel="noopener noreferrer") */
+  newTab?: boolean;
 }
 
 const variants: Record<ButtonVariant, string> = {
@@ -72,26 +83,26 @@ export function Button({
   disabled,
   onClick,
   type = 'button',
+  href,
+  newTab,
 }: ButtonProps) {
-  return (
-    <motion.button
-      type={type}
-      className={cn(
-        'relative inline-flex items-center justify-center gap-2',
-        'rounded-xl font-semibold overflow-hidden',
-        'transition-all duration-200',
-        'focus:outline-none focus:ring-4 focus:ring-primary/30',
-        'disabled:opacity-50 disabled:cursor-not-allowed',
-        variants[variant],
-        sizes[size],
-        pulse && 'animate-pulse-ring',
-        className
-      )}
-      whileHover={{ scale: disabled ? 1 : 1.02 }}
-      whileTap={{ scale: disabled ? 1 : 0.98 }}
-      disabled={disabled || isLoading}
-      onClick={onClick}
-    >
+  const classes = cn(
+    'relative inline-flex items-center justify-center gap-2 cursor-pointer select-none',
+    'rounded-xl font-semibold overflow-hidden',
+    'transition-all duration-200',
+    'focus:outline-none focus:ring-4 focus:ring-primary/30',
+    'disabled:opacity-50 disabled:cursor-not-allowed',
+    variants[variant],
+    sizes[size],
+    pulse && 'animate-pulse-ring',
+    className
+  );
+  const motionProps = {
+    whileHover: { scale: disabled ? 1 : 1.02 },
+    whileTap: { scale: disabled ? 1 : 0.98 },
+  };
+  const content = (
+    <>
       {isLoading && (
         <svg
           className="animate-spin h-5 w-5"
@@ -114,14 +125,16 @@ export function Button({
           />
         </svg>
       )}
-      {!isLoading && leftIcon}
-      {children}
-      {!isLoading && rightIcon}
-      
+      {!isLoading && leftIcon && <span className="pointer-events-none inline-flex">{leftIcon}</span>}
+      {/* El texto y los íconos no capturan el clic: todo el botón responde igual */}
+      <span className="pointer-events-none">{children}</span>
+      {!isLoading && rightIcon && <span className="pointer-events-none inline-flex">{rightIcon}</span>}
+
       {/* Efecto de brillo para CTA */}
       {variant === 'cta' && (
-        <motion.div
-          className="absolute inset-0 rounded-xl bg-linear-to-r from-transparent via-white/20 to-transparent"
+        <motion.span
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 rounded-xl bg-linear-to-r from-transparent via-white/20 to-transparent"
           initial={{ x: '-100%' }}
           animate={{ x: '100%' }}
           transition={{
@@ -132,6 +145,32 @@ export function Button({
           }}
         />
       )}
+    </>
+  );
+
+  if (href) {
+    const isExternal = /^https?:\/\//.test(href);
+    const linkProps = newTab ? { target: '_blank', rel: 'noopener noreferrer' } : {};
+    return isExternal ? (
+      <motion.a href={href} className={classes} onClick={onClick} {...linkProps} {...motionProps}>
+        {content}
+      </motion.a>
+    ) : (
+      <MotionLink href={href} className={classes} onClick={onClick} {...linkProps} {...motionProps}>
+        {content}
+      </MotionLink>
+    );
+  }
+
+  return (
+    <motion.button
+      type={type}
+      className={classes}
+      {...motionProps}
+      disabled={disabled || isLoading}
+      onClick={onClick}
+    >
+      {content}
     </motion.button>
   );
 }

@@ -204,15 +204,14 @@ export function FAQSection() {
           <p className="text-lg text-foreground mb-4">
             ¿Tienes más preguntas? Te las respondemos en tu auditoría gratuita.
           </p>
-          <a href="#agendar">
-            <Button
-              variant="cta"
-              size="lg"
-              rightIcon={<ArrowRight className="w-5 h-5" />}
-            >
-              TENGO MÁS PREGUNTAS - QUIERO MI AUDITORÍA
-            </Button>
-          </a>
+          <Button
+            href="#agendar"
+            variant="cta"
+            size="lg"
+            rightIcon={<ArrowRight className="w-5 h-5" />}
+          >
+            TENGO MÁS PREGUNTAS - QUIERO MI AUDITORÍA
+          </Button>
           <p className="text-foreground-muted text-sm mt-3">
             En español · Auditoría gratis · Sin compromiso
           </p>

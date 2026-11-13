@@ -60,16 +60,16 @@ export function FooterSection() {
 
             <p className="text-2xl font-bold text-secondary mb-6">¿Cuál eliges?</p>
 
-            <a href="https://api.leadconnectorhq.com/widget/form/xwCKMIZkUP3AdUAFpRsj" target="_blank" rel="noopener noreferrer">
-              <Button
-                variant="cta"
-                size="xl"
-                className="text-xl px-12 py-6"
-                rightIcon={<ArrowRight className="w-6 h-6" />}
-              >
-                ELIJO TOMAR CONTROL - AGENDA MI AUDITORÍA
-              </Button>
-            </a>
+            <Button
+              href="https://api.leadconnectorhq.com/widget/form/xwCKMIZkUP3AdUAFpRsj"
+              newTab
+              variant="cta"
+              size="xl"
+              className="text-xl px-12 py-6"
+              rightIcon={<ArrowRight className="w-6 h-6" />}
+            >
+              ELIJO TOMAR CONTROL - AGENDA MI AUDITORÍA
+            </Button>
             <p className="text-sm text-white/80 mt-3 mb-6">
               En español · Auditoría gratis · Sin compromiso
             </p>

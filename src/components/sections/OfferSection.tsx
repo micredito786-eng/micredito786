@@ -259,16 +259,16 @@ export function OfferSection() {
               <p className="text-white/85 mb-6">
                 Descubre qué necesita tu perfil y recibe un plan personalizado.
               </p>
-              <a href="https://api.leadconnectorhq.com/widget/booking/QCel3cAmpWQEksSyc2zY" target="_blank" rel="noopener noreferrer" className="block">
-                <Button
-                  variant="secondary"
-                  size="xl"
-                  className="w-full text-lg"
-                  rightIcon={<ArrowRight className="w-6 h-6" />}
-                >
-                  AGENDA AHORA
-                </Button>
-              </a>
+              <Button
+                href="https://api.leadconnectorhq.com/widget/booking/QCel3cAmpWQEksSyc2zY"
+                newTab
+                variant="secondary"
+                size="xl"
+                className="w-full text-lg"
+                rightIcon={<ArrowRight className="w-6 h-6" />}
+              >
+                AGENDA AHORA
+              </Button>
               <p className="text-white/80 text-sm mt-3">
                 En español · Auditoría gratis · Sin compromiso
               </p>
@@ -319,16 +319,16 @@ export function OfferSection() {
               </p>
             </div>
 
-            <a href="https://api.leadconnectorhq.com/widget/booking/QCel3cAmpWQEksSyc2zY" target="_blank" rel="noopener noreferrer" className="w-full">
-              <Button
-                variant="cta"
-                size="xl"
-                className="w-full text-xl"
-                rightIcon={<ArrowRight className="w-6 h-6" />}
-              >
-                SÍ, QUIERO MI AUDITORÍA GRATUITA
-              </Button>
-            </a>
+            <Button
+              href="https://api.leadconnectorhq.com/widget/booking/QCel3cAmpWQEksSyc2zY"
+              newTab
+              variant="cta"
+              size="xl"
+              className="w-full text-xl"
+              rightIcon={<ArrowRight className="w-6 h-6" />}
+            >
+              SÍ, QUIERO MI AUDITORÍA GRATUITA
+            </Button>
 
             <p className="mt-4 text-sm text-foreground-muted">
               En español · Auditoría gratis · Sin compromiso
