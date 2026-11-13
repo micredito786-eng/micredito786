@@ -16,7 +16,7 @@ export const siteConfig = {
   /** Plantilla para los títulos de páginas internas: "Título | Mi Crédito 786™" */
   titleTemplate: '%s | Mi Crédito 786™',
   description:
-    'Ayudamos a latinos en USA a entender y corregir errores en su reporte de crédito, de forma legal y en español. Auditoría gratuita y sin compromiso.',
+    'Auditoría de crédito gratis en español. Te ayudamos a encontrar y disputar errores en tu reporte de crédito. Resultados no garantizados.',
   keywords: [
     'credit repair',
     'reparación de crédito',
