@@ -20,7 +20,7 @@
 Miami, FL 33130
 
 ## Enlace para Agendar Auditoría
-https://calendly.com/micredito786-konfia/auditoria-crediticia-gratuita-786
+https://api.leadconnectorhq.com/widget/booking/QCel3cAmpWQEksSyc2zY
 
 ## Redes Sociales
 - **Instagram:** https://www.instagram.com/micredito786/

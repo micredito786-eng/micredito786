@@ -138,7 +138,9 @@ export function PainSection() {
               QUIERO SALIR DE ESTO YA
             </Button>
           </a>
-          <p className="text-foreground-muted text-sm mt-3">47 cupos restantes</p>
+          <p className="text-foreground-muted text-sm mt-3">
+            En español · Auditoría gratis · Sin compromiso
+          </p>
         </motion.div>
       </Container>
     </section>

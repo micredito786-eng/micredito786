@@ -29,12 +29,6 @@ const notForYouList = [
   'No tienes paciencia para 90-135 días de proceso',
 ];
 
-const states = [
-  'Florida', 'Texas', 'California', 'Nueva York', 'Illinois',
-  'Georgia', 'Carolina del Norte', 'Nevada', 'Arizona',
-  'New Jersey', 'Pennsylvania', 'y TODO Estados Unidos'
-];
-
 export function ForWhoSection() {
   return (
     <section className="py-20 bg-white">
@@ -160,18 +154,8 @@ export function ForWhoSection() {
           <h3 className="text-2xl font-bold text-foreground mb-6">
             🇺🇸 SERVIMOS A TODA LA COMUNIDAD LATINA EN USA
           </h3>
-          <div className="flex flex-wrap justify-center gap-2 mb-6">
-            {states.map((state, index) => (
-              <span
-                key={index}
-                className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full"
-              >
-                {state}
-              </span>
-            ))}
-          </div>
           <p className="text-lg text-foreground mb-2">
-            🇵🇷 <strong>TAMBIÉN SERVIMOS PUERTO RICO</strong>
+            <strong>Atendemos a la comunidad latina en todo Estados Unidos, 100% virtual y en español.</strong>
           </p>
           <p className="text-foreground-muted">
             Todo el proceso en ESPAÑOL. Entendemos tu situación. Respetamos tu cultura.
@@ -188,7 +172,7 @@ export function ForWhoSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <a href="https://pulse.disputeprocess.com/jsp/custom_form.jsp?tab_id=UEVFb0dPMlNnaVlLOGgvLzB4c0RaZz09&add_affiliate=0&cust_type=1&company_id=RlROSXBsY3FIL2tGcWkrL2Y3NFlTQT09&isLinkFromIframe=1" target="_blank" rel="noopener noreferrer">
+          <a href="https://api.leadconnectorhq.com/widget/form/xwCKMIZkUP3AdUAFpRsj" target="_blank" rel="noopener noreferrer">
             <Button
               variant="cta"
               size="lg"
@@ -198,7 +182,7 @@ export function ForWhoSection() {
             </Button>
           </a>
           <p className="text-foreground-muted text-sm mt-3">
-            En español · Sin compromiso · 47 cupos
+            En español · Auditoría gratis · Sin compromiso
           </p>
         </motion.div>
       </Container>

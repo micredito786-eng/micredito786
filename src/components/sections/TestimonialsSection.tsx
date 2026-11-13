@@ -81,7 +81,7 @@ export function TestimonialsSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-6">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -152,6 +152,11 @@ export function TestimonialsSection() {
           ))}
         </div>
 
+        {/* Aviso de testimonios */}
+        <p className="max-w-3xl mx-auto text-center text-sm text-foreground-muted italic mb-12">
+          Testimonios de clientes reales, compartidos con su permiso. Cada caso es diferente; estos resultados no son típicos ni están garantizados.
+        </p>
+
         {/* CTA */}
         <motion.div
           className="text-center"
@@ -169,7 +174,7 @@ export function TestimonialsSection() {
             </Button>
           </a>
           <p className="text-foreground-muted text-sm mt-3">
-            47 cupos · Todo en español 🇪🇸
+            En español · Auditoría gratis · Sin compromiso
           </p>
         </motion.div>
       </Container>

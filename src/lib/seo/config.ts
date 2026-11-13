@@ -33,7 +33,7 @@ export const siteConfig = {
   contact: {
     phone: '+1-786-755-1243',
     email: 'micredito786@konfia.io',
-    whatsapp: 'https://wa.me/13502008330',
+    whatsapp: 'https://wa.me/17862510360',
   },
   address: {
     streetAddress: '420 SW 7th ST Suite 907',
@@ -44,7 +44,7 @@ export const siteConfig = {
   },
   openingHours: [
     { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:00', closes: '19:00' },
-    { days: ['Saturday'], opens: '10:00', closes: '17:00' },
+    { days: ['Saturday'], opens: '09:00', closes: '14:00' },
   ],
   areaServed: ['US', 'PR'],
   social: [
@@ -71,6 +71,7 @@ type SitemapEntry = {
 export const sitemapPages: SitemapEntry[] = [
   { path: '/', changeFrequency: 'monthly', priority: 1, lastModified: '2026-09-26' },
   { path: '/blog', changeFrequency: 'weekly', priority: 0.7 },
+  { path: '/terminos-y-condiciones', changeFrequency: 'yearly', priority: 0.3, lastModified: '2026-11-11' },
 ];
 
 /**

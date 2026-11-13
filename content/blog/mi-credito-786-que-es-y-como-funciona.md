@@ -37,7 +37,7 @@ faqs:
 
 Si llegaste aquí buscando **Mi Crédito 786**, "credit 786" o "786 crédito", seguramente nos viste en redes sociales, te recomendó alguien o encontraste nuestro número de Miami. En esta página te explicamos sin rodeos quiénes somos, cómo trabajamos y qué puedes esperar, para que decidas con información.
 
-Una aclaración importante: hay otras empresas con nombres parecidos que también usan el número 786, que es un código de área de Miami. Nuestro sitio oficial es **micredito786.com** y nuestro WhatsApp es el **+1 (350) 200-8330**.
+Una aclaración importante: hay otras empresas con nombres parecidos que también usan el número 786, que es un código de área de Miami. Nuestro sitio oficial es **micredito786.com** y nuestro WhatsApp es el **+1 (786) 251-0360**.
 
 ## Qué es Mi Crédito 786
 

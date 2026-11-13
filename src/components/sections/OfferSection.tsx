@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Container, Button, Card, Badge, ProgressBar } from '@/components/ui';
+import { Container, Button, Card, Badge } from '@/components/ui';
 import { 
   ArrowRight, 
   CheckCircle, 
@@ -26,7 +26,7 @@ const cycles = [
     description: 'Te mostramos EXACTAMENTE qué te está hundiendo.',
     icon: Search,
     items: [
-      'Las 8-15 cuentas ESPECÍFICAS que te cuestan aprobaciones',
+      'Las cuentas que te están quitando aprobaciones',
       'Los errores EXACTOS en cada una (dates, amounts, status)',
       'Cuánto impacto tiene cada error en tu score',
       'Disputas PERSONALIZADAS escritas para TU caso',
@@ -47,13 +47,13 @@ const cycles = [
       'Credit builder loans (si tu caso lo necesita)',
       'Te explicamos TODO: por qué y cómo te beneficia',
     ],
-    result: 'Score subiendo + perfil mejorando + tú entendiendo',
+    result: 'Ajustamos la estrategia según lo que respondan los burós + tú entiendes cada paso',
   },
   {
     number: 3,
     days: '91-135',
     title: 'PREPARACIÓN PARA TU META',
-    description: 'Te dejamos 100% LISTO para aplicar.',
+    description: 'Te preparamos para aplicar con un plan claro.',
     icon: Target,
     items: [
       'Últimas optimizaciones',
@@ -62,7 +62,7 @@ const cycles = [
       'Qué decir, qué documentos llevar',
       'Cómo presentarte para pre-calificaciones',
     ],
-    result: 'Perfil listo para PRE-CALIFICACIONES con confianza',
+    result: 'Sabrás cuándo y cómo aplicar',
   },
 ];
 
@@ -78,9 +78,6 @@ const included = [
 ];
 
 export function OfferSection() {
-  const cuposVendidos = 53;
-  const cuposTotal = 100;
-
   return (
     <section className="py-20 bg-white">
       <Container>
@@ -199,7 +196,7 @@ export function OfferSection() {
                     <li>✓ Derecho a DISPUTAR por ti mismo sin contratar a nadie</li>
                   </ul>
                   <p className="text-sm font-semibold text-primary mt-2">
-                    NOSOTROS CUMPLIMOS 100% CON ESTAS LEYES.
+                    Trabajamos bajo estas leyes. No cobramos por un servicio antes de completarlo.
                   </p>
                 </div>
               </div>
@@ -229,8 +226,8 @@ export function OfferSection() {
                     <li>❌ Aprobación garantizada para préstamos</li>
                   </ul>
                   <p className="text-sm text-foreground">
-                    <strong>LO QUE SÍ GARANTIZAMOS:</strong> Auditoría completa, disputas personalizadas, 
-                    proceso legal bajo FCRA/CROA, y transparencia total.
+                    <strong>LO QUE SÍ TE DAMOS:</strong> auditoría completa, disputas hechas a tu medida,
+                    un proceso que cumple con la ley y transparencia total.
                   </p>
                 </div>
               </div>
@@ -246,12 +243,9 @@ export function OfferSection() {
           viewport={{ once: true }}
         >
           <Card variant="elevated" padding="lg" className="border-2 border-primary">
-            <p className="text-foreground-muted mb-2">Otras agencias prometen resultados.</p>
-            <p className="text-lg text-foreground line-through mb-2">
-              Eliminar todo · Subir 100 puntos · Resultados garantizados
-            </p>
-            <p className="text-foreground-muted mb-4">
-              Nosotros te damos algo mejor: una estrategia real.
+            <p className="text-lg text-foreground mb-4">
+              Otras agencias te prometen cosas que nadie puede garantizar.{' '}
+              <strong className="text-primary font-extrabold">Nosotros te damos un plan real.</strong>
             </p>
 
             <div className="bg-primary text-white rounded-2xl p-8 mb-6 text-left relative overflow-hidden">
@@ -265,7 +259,7 @@ export function OfferSection() {
               <p className="text-white/85 mb-6">
                 Descubre qué necesita tu perfil y recibe un plan personalizado.
               </p>
-              <a href="https://calendly.com/micredito786-konfia/auditoria-crediticia-gratuita-786" target="_blank" rel="noopener noreferrer" className="block">
+              <a href="https://api.leadconnectorhq.com/widget/booking/QCel3cAmpWQEksSyc2zY" target="_blank" rel="noopener noreferrer" className="block">
                 <Button
                   variant="secondary"
                   size="xl"
@@ -275,6 +269,9 @@ export function OfferSection() {
                   AGENDA AHORA
                 </Button>
               </a>
+              <p className="text-white/80 text-sm mt-3">
+                En español · Auditoría gratis · Sin compromiso
+              </p>
             </div>
 
             <ul className="text-left space-y-4 mb-6">
@@ -310,21 +307,6 @@ export function OfferSection() {
               </li>
             </ul>
 
-            <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6">
-              <div className="flex items-center gap-3 mb-3">
-                <Users className="w-6 h-6 text-amber-600 shrink-0" />
-                <div className="text-left">
-                  <p className="text-sm text-amber-700 font-semibold">Cupos limitados esta semana</p>
-                  <p className="text-xs text-foreground-muted">Estamos tomando nuevos clientes para evaluación.</p>
-                </div>
-              </div>
-              <ProgressBar value={cuposVendidos} max={cuposTotal} variant="gradient" />
-              <div className="flex justify-between text-xs text-foreground-muted mt-2">
-                <span>{cuposVendidos} evaluaciones agendadas</span>
-                <span>{cuposTotal - cuposVendidos} cupos disponibles</span>
-              </div>
-            </div>
-
             {/* Garantía */}
             <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-6">
               <div className="flex items-center justify-center gap-2 mb-2">
@@ -337,7 +319,7 @@ export function OfferSection() {
               </p>
             </div>
 
-            <a href="https://calendly.com/micredito786-konfia/auditoria-crediticia-gratuita-786" target="_blank" rel="noopener noreferrer" className="w-full">
+            <a href="https://api.leadconnectorhq.com/widget/booking/QCel3cAmpWQEksSyc2zY" target="_blank" rel="noopener noreferrer" className="w-full">
               <Button
                 variant="cta"
                 size="xl"
@@ -348,11 +330,9 @@ export function OfferSection() {
               </Button>
             </a>
 
-            <div className="flex flex-wrap justify-center gap-4 mt-4 text-sm text-foreground-muted">
-              <span>✅ 100% en español</span>
-              <span>🇺🇸 Servimos todo USA + PR 🇵🇷</span>
-              <span>✅ Sin compromiso</span>
-            </div>
+            <p className="mt-4 text-sm text-foreground-muted">
+              En español · Auditoría gratis · Sin compromiso
+            </p>
           </Card>
         </motion.div>
       </Container>

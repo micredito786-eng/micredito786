@@ -1,16 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Container, Button, ProgressBar } from '@/components/ui';
+import { Container, Button } from '@/components/ui';
 import { ArrowRight, Phone, MessageCircle, Clock, Shield, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export function FooterSection() {
-  const cuposVendidos = 53;
-  const cuposTotal = 100;
-  const cuposDisponibles = cuposTotal - cuposVendidos;
-
   return (
     <footer className="bg-primary text-white">
       {/* CTA Final */}
@@ -64,41 +60,29 @@ export function FooterSection() {
 
             <p className="text-2xl font-bold text-secondary mb-6">¿Cuál eliges?</p>
 
-            <a href="https://pulse.disputeprocess.com/jsp/custom_form.jsp?tab_id=UEVFb0dPMlNnaVlLOGgvLzB4c0RaZz09&add_affiliate=0&cust_type=1&company_id=RlROSXBsY3FIL2tGcWkrL2Y3NFlTQT09&isLinkFromIframe=1" target="_blank" rel="noopener noreferrer">
+            <a href="https://api.leadconnectorhq.com/widget/form/xwCKMIZkUP3AdUAFpRsj" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="cta"
                 size="xl"
-                className="text-xl px-12 py-6 mb-6"
+                className="text-xl px-12 py-6"
                 rightIcon={<ArrowRight className="w-6 h-6" />}
               >
                 ELIJO TOMAR CONTROL - AGENDA MI AUDITORÍA
               </Button>
             </a>
+            <p className="text-sm text-white/80 mt-3 mb-6">
+              En español · Auditoría gratis · Sin compromiso
+            </p>
 
-            <div className="flex flex-wrap justify-center gap-6 text-sm mb-8">
+            <div className="flex flex-wrap justify-center gap-6 text-sm">
               <a href="tel:+17867551243" className="flex items-center gap-2 hover:text-secondary transition-colors">
                 <Phone className="w-4 h-4" />
                 <span>+1 (786) 755-1243</span>
               </a>
-              <a href="https://wa.me/13502008330" className="flex items-center gap-2 hover:text-secondary transition-colors">
+              <a href="https://wa.me/17862510360" className="flex items-center gap-2 hover:text-secondary transition-colors">
                 <MessageCircle className="w-4 h-4" />
-                <span>WhatsApp: +1 (350) 200-8330</span>
+                <span>WhatsApp: +1 (786) 251-0360</span>
               </a>
-            </div>
-
-            <div className="max-w-sm mx-auto mb-6">
-              <ProgressBar
-                value={cuposVendidos}
-                max={cuposTotal}
-                variant="secondary"
-                size="md"
-                darkBackground
-              />
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-white/80">
-              <span>⏰ Cupos disponibles: {cuposDisponibles}/{cuposTotal}</span>
-              <span>✅ Sin compromiso</span>
             </div>
           </motion.div>
         </Container>
@@ -184,7 +168,7 @@ export function FooterSection() {
                 </li>
                 <li className="flex items-center gap-2">
                   <MessageCircle className="w-4 h-4" />
-                  <a href="https://wa.me/13502008330" className="hover:text-white transition-colors">WhatsApp: +1 (350) 200-8330</a>
+                  <a href="https://wa.me/17862510360" className="hover:text-white transition-colors">WhatsApp: +1 (786) 251-0360</a>
                 </li>
                 <li className="flex items-center gap-2">
                   <MapPin className="w-4 h-4" />
@@ -192,7 +176,7 @@ export function FooterSection() {
                 </li>
               </ul>
               <p className="text-white/70 text-sm mt-3">
-                <strong>Horario:</strong> Lun-Vie 9am-7pm | Sáb 10am-5pm (EST)
+                <strong>Horario:</strong> Lun-Vie 9am-7pm | Sáb 9am-2pm (EST)
               </p>
               <div className="flex gap-2 mt-4">
                 <span className="text-2xl">🇺🇸</span>
@@ -206,24 +190,28 @@ export function FooterSection() {
               <div className="flex items-start gap-2 text-white/70 text-sm mb-4">
                 <Shield className="w-4 h-4 shrink-0 mt-0.5" />
                 <p>
-                  Operamos en cumplimiento con CROA (Credit Repair Organizations Act) y 
-                  FCRA (Fair Credit Reporting Act).
+                  Cumplimos con las leyes federales CROA y FCRA y con la ley de Florida para
+                  compañías de servicios de crédito.
+                </p>
+              </div>
+              <div className="flex items-start gap-2 text-white/70 text-sm mb-4">
+                <MapPin className="w-4 h-4 shrink-0 mt-0.5" />
+                <p>
+                  <strong className="text-white">AVISO POR ESTADO:</strong> Ofrecemos educación y consultoría de
+                  crédito en todo Estados Unidos. El servicio de disputas depende de tu estado: algunos estados
+                  exigen registro o fianza propia, y en Georgia no ofrecemos reparación de crédito. Antes de
+                  contratar te confirmamos por escrito qué servicios aplican donde vives.
                 </p>
               </div>
               <ul className="space-y-2 text-white/70 text-sm">
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
+                  <Link href="/politica-de-privacidad" className="hover:text-white transition-colors">
                     Política de Privacidad
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Términos de Servicio
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Aviso Legal
+                  <Link href="/terminos-y-condiciones" className="hover:text-white transition-colors">
+                    Términos y Condiciones
                   </Link>
                 </li>
               </ul>
@@ -240,7 +228,7 @@ export function FooterSection() {
               ningún servicio.
             </p>
             <p className="text-sm text-white/70">
-              © {new Date().getFullYear()} Konfia Corp. (Mi Crédito 786™) | Miami, Florida | Todos los derechos reservados
+              Mi Crédito 786™ es una marca de KONFIA Corp, empresa de Florida. © {new Date().getFullYear()} KONFIA Corp. Todos los derechos reservados.
             </p>
             <p className="text-xs text-white/50 mt-2">
               📧 micredito786@konfia.io | Servimos: USA & Puerto Rico 🇺🇸🇵🇷

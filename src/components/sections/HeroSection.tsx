@@ -1,14 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Container, Button, Badge, ProgressBar } from '@/components/ui';
-import { ArrowRight, Clock, Users, CheckCircle } from 'lucide-react';
+import { Container, Button, Badge } from '@/components/ui';
+import { ArrowRight } from 'lucide-react';
 
 export function HeroSection() {
-  const cuposVendidos = 53;
-  const cuposTotal = 100;
-  const cuposDisponibles = cuposTotal - cuposVendidos;
-
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Video de fondo placeholder - se puede reemplazar por un video real */}
@@ -30,7 +26,7 @@ export function HeroSection() {
             transition={{ duration: 0.6 }}
           >
             <Badge variant="warning" size="lg" pulse className="mb-8">
-              🔥 Solo quedan {cuposDisponibles} cupos este mes
+              Auditoría de crédito GRATIS · 100% en español
             </Badge>
           </motion.div>
 
@@ -86,62 +82,26 @@ export function HeroSection() {
             </p>
           </motion.div>
 
-          {/* Barra de progreso de cupos */}
-          <motion.div
-            className="max-w-md mx-auto mb-8"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 1 }}
-          >
-            <ProgressBar
-              value={cuposVendidos}
-              max={cuposTotal}
-              variant="secondary"
-              size="lg"
-              darkBackground
-            />
-          </motion.div>
-
           {/* CTA Principal */}
           <motion.div
+            className="mb-16"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.2 }}
           >
-            <a href="https://pulse.disputeprocess.com/jsp/custom_form.jsp?tab_id=UEVFb0dPMlNnaVlLOGgvLzB4c0RaZz09&add_affiliate=0&cust_type=1&company_id=RlROSXBsY3FIL2tGcWkrL2Y3NFlTQT09&isLinkFromIframe=1" target="_blank" rel="noopener noreferrer">
+            <a href="https://api.leadconnectorhq.com/widget/form/xwCKMIZkUP3AdUAFpRsj" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="cta"
                 size="xl"
                 className="text-lg sm:text-xl px-8 sm:px-12 py-5 sm:py-6"
                 rightIcon={<ArrowRight className="w-6 h-6" />}
               >
-                QUIERO MI CUPO AHORA
+                QUIERO MI AUDITORÍA GRATIS
               </Button>
             </a>
             <p className="text-white/70 mt-4 text-sm">
-              Auditoría gratuita - Solo 30 minutos
+              En español · Auditoría gratis · Sin compromiso
             </p>
-          </motion.div>
-
-          {/* Indicadores de confianza */}
-          <motion.div
-            className="flex flex-wrap justify-center gap-4 sm:gap-8 mt-10 mb-16 text-white/80 text-sm"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.4 }}
-          >
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-secondary" />
-              <span>Última actualización: hace 3 min</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Users className="w-4 h-4 text-secondary" />
-              <span>23 personas viendo ahora</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-secondary" />
-              <span>8 auditorías agendadas hoy</span>
-            </div>
           </motion.div>
         </div>
       </Container>

@@ -2,24 +2,24 @@
 
 import { motion } from 'framer-motion';
 import { Container, Button, Card } from '@/components/ui';
-import { ArrowRight, XCircle, CheckCircle } from 'lucide-react';
+import { ArrowRight, XCircle, CheckCircle, FileSearch } from 'lucide-react';
 
 const myths = [
   {
-    lie: 'En USA, si pagas tus deudas tu crédito sube automáticamente',
-    truth: `En tu país quizás funcionaba así. Aquí NO. El 70% de reportes de crédito tienen ERRORES (dato oficial de la FTC). Puedes pagar TODAS tus deudas y seguir con cuentas duplicadas, balances incorrectos, fechas equivocadas. Pagaste... pero el sistema no se actualizó.`,
+    lie: 'Mi reporte está bien, no tengo que revisarlo.',
+    truth: `La FTC (gobierno de EE.UU.) encontró que 1 de cada 5 personas tiene un error en su reporte de crédito. Y el reporte de crédito es lo que más quejas recibe el gobierno: más de 5.8 millones en 2025.`,
   },
   {
-    lie: 'Solo espera 7 años y tu crédito se limpia solo',
-    truth: `Eso es lo que te dicen para que NO HAGAS NADA. Muchos errores NO se van en 7 años. Algunos reportes incorrectos quedan 10, 15, 20 años. Los burós de crédito NO revisan tu reporte. HASTA QUE TÚ LO DISPUTES bajo las leyes FCRA.`,
+    lie: 'Mejor espero 7 años y se borra solo.',
+    truth: `Lo negativo puede quedarse hasta 7 años (una bancarrota hasta 10). Pero si tu reporte tiene un error, no tienes que esperar: la ley te da derecho a disputarlo y el buró tiene que investigarlo, normalmente en 30 días.`,
   },
   {
     lie: 'Necesitas un Social Security de muchos años para tener buen crédito',
     truth: `FALSO. He trabajado con clientes que tienen 2-3 años en USA y lograron scores de 680-720. NO es cuánto tiempo llevas. Es CÓMO está reportada tu información. La diferencia: uno tiene errores que nadie corrigió, el otro construyó su crédito ESTRATÉGICAMENTE.`,
   },
   {
-    lie: 'Los servicios de credit repair son todos iguales',
-    truth: `El 90% de "credit repair" son BASURA. Cartas genéricas de Google traducidas al español. Te cobran $99-150/mes por MESES sin resultados. Resultado: $800-1,200 PERDIDOS. Tu crédito: IGUAL. ¿Ya te pasó?`,
+    lie: 'Todas las compañías de crédito son iguales.',
+    truth: `Muchas mandan cartas genéricas y cobran por meses sin explicarte nada. Nosotros hacemos cada disputa a tu medida y te explicamos cada paso.`,
   },
 ];
 
@@ -58,7 +58,7 @@ export function TruthSection() {
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-wider text-red-500 font-semibold mb-1">
-                      Mentira #{index + 1}
+                      Mito #{index + 1}
                     </p>
                     <p className="text-lg font-bold text-foreground">
                       &ldquo;{myth.lie}&rdquo;
@@ -73,7 +73,7 @@ export function TruthSection() {
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-wider text-secondary font-semibold mb-1">
-                      Verdad Real
+                      La Verdad
                     </p>
                     <p className="text-foreground-muted leading-relaxed">
                       {myth.truth}
@@ -84,6 +84,27 @@ export function TruthSection() {
             </motion.div>
           ))}
         </div>
+
+        {/* Dato: reportes gratis */}
+        <motion.div
+          className="max-w-4xl mx-auto mt-8"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className="flex items-start gap-4 bg-primary/5 border border-primary/20 rounded-2xl p-6">
+            <div className="shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+              <FileSearch className="w-6 h-6 text-primary" />
+            </div>
+            <p className="text-foreground leading-relaxed">
+              <strong>
+                ¿Sabías que puedes ver tus 3 reportes de crédito GRATIS cada semana en AnnualCreditReport.com?
+              </strong>{' '}
+              Te enseñamos a leerlos. Y si quieres que lo hagamos contigo, agenda tu auditoría gratis.
+            </p>
+          </div>
+        </motion.div>
 
         {/* Lo que sí funciona */}
         <motion.div
@@ -113,10 +134,10 @@ export function TruthSection() {
                 </li>
               ))}
             </ul>
-            <p className="text-xl font-bold text-primary mb-6">
-              NO en 7 años. EN 45-135 DÍAS.
+            <p className="text-lg font-semibold text-primary mb-6 max-w-xl mx-auto">
+              Trabajamos en ciclos de 45 días. Muchos clientes ven cambios en 45 a 135 días. Cada caso es diferente y no garantizamos resultados.
             </p>
-            <a href="https://pulse.disputeprocess.com/jsp/custom_form.jsp?tab_id=UEVFb0dPMlNnaVlLOGgvLzB4c0RaZz09&add_affiliate=0&cust_type=1&company_id=RlROSXBsY3FIL2tGcWkrL2Y3NFlTQT09&isLinkFromIframe=1" target="_blank" rel="noopener noreferrer">
+            <a href="https://api.leadconnectorhq.com/widget/form/xwCKMIZkUP3AdUAFpRsj" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="cta"
                 size="lg"
@@ -126,7 +147,7 @@ export function TruthSection() {
               </Button>
             </a>
             <p className="text-sm text-foreground-muted mt-3">
-              47 cupos · Atención en español 🇪🇸
+              En español · Auditoría gratis · Sin compromiso
             </p>
           </Card>
         </motion.div>

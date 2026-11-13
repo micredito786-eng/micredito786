@@ -214,7 +214,7 @@ export function FAQSection() {
             </Button>
           </a>
           <p className="text-foreground-muted text-sm mt-3">
-            47 cupos · Español · Sin compromiso
+            En español · Auditoría gratis · Sin compromiso
           </p>
         </motion.div>
       </Container>

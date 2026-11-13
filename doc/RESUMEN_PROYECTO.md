@@ -67,7 +67,7 @@
 - Botón CTA → Calendario
 
 ### 📅 Sección Calendario (CalendlySection)
-- Widget de Calendly embebido directamente en la página
+- Calendario de LeadConnector embebido directamente en la página
 - Título: "Tu Primer Paso Hacia un Crédito Limpio"
 - Indicadores: 100% español, 30 minutos, sin compromiso
 - Los botones de "agendar" hacen scroll a esta sección
@@ -110,10 +110,10 @@
 - **TikTok:** https://www.tiktok.com/@micrediti786
 
 ### Calendario de Auditoría
-- **Calendly:** https://calendly.com/micredito786-konfia/auditoria-crediticia-gratuita-786
+- **Calendario (LeadConnector):** https://api.leadconnectorhq.com/widget/booking/QCel3cAmpWQEksSyc2zY
 
 ### Formulario de Registro
-- **Dispute Process:** https://pulse.disputeprocess.com/jsp/custom_form.jsp?...
+- **Dispute Process:** https://api.leadconnectorhq.com/widget/form/xwCKMIZkUP3AdUAFpRsj
 
 ---
 
