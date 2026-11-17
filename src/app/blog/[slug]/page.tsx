@@ -18,7 +18,7 @@ import {
   TableOfContents,
 } from '@/components/blog';
 import { JsonLd } from '@/components/seo';
-import { formatDate, getAllPosts, getPostBySlug, getRelatedPosts } from '@/lib/blog';
+import { formatDate, getAdjacentPosts, getAllPosts, getPostBySlug, getRelatedPosts } from '@/lib/blog';
 import { absoluteUrl, blogPostingSchema, breadcrumbSchema, createMetadata, faqPageSchema } from '@/lib/seo';
 
 type PageProps = { params: Promise<{ slug: string }> };
@@ -61,6 +61,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   if (!post) notFound();
 
   const related = getRelatedPosts(post);
+  const { older, newer } = getAdjacentPosts(post);
   const wasUpdated = post.updated.slice(0, 10) !== post.date.slice(0, 10);
   const crumbs = [
     { name: 'Blog', path: '/blog' },
@@ -162,6 +163,31 @@ export default async function BlogPostPage({ params }: PageProps) {
               <AuditCard className="hidden lg:sticky lg:top-28 lg:flex" />
             </div>
           </article>
+
+          {(older || newer) && (
+            <nav aria-label="Más artículos" className="mt-16 grid gap-4 sm:grid-cols-2">
+              {older ? (
+                <Link
+                  href={older.path}
+                  className="group flex flex-col gap-1 rounded-2xl border border-line bg-white p-5 transition-colors hover:border-primary sm:p-6"
+                >
+                  <span className="text-[13px] font-bold uppercase tracking-[0.1em] text-ink-muted">← Artículo anterior</span>
+                  <span className="font-bold leading-snug text-ink group-hover:text-primary">{older.title}</span>
+                </Link>
+              ) : (
+                <span aria-hidden="true" />
+              )}
+              {newer && (
+                <Link
+                  href={newer.path}
+                  className="group flex flex-col gap-1 rounded-2xl border border-line bg-white p-5 text-right transition-colors hover:border-primary sm:p-6"
+                >
+                  <span className="text-[13px] font-bold uppercase tracking-[0.1em] text-ink-muted">Artículo siguiente →</span>
+                  <span className="font-bold leading-snug text-ink group-hover:text-primary">{newer.title}</span>
+                </Link>
+              )}
+            </nav>
+          )}
 
           <PostCta className="mt-20 sm:mt-24" />
 

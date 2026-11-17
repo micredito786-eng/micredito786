@@ -11,3 +11,4 @@ export { FooterSection } from './FooterSection';
 export { GraciasSection } from './GraciasSection';
 export { TerminosSection } from './TerminosSection';
 export { PrivacidadSection } from './PrivacidadSection';
+export { LatestGuidesSection } from './LatestGuidesSection';

@@ -195,6 +195,17 @@ export function getRelatedPosts(post: PostSummary, limit = 3): PostSummary[] {
     .map(({ post: p }) => p);
 }
 
+/**
+ * Artículo anterior (más viejo) y siguiente (más nuevo) por fecha.
+ * Encadena todos los artículos entre sí: ninguno queda sin enlaces internos.
+ */
+export function getAdjacentPosts(post: PostSummary): { older?: PostSummary; newer?: PostSummary } {
+  const posts = getAllPosts();
+  const index = posts.findIndex((p) => p.slug === post.slug);
+  if (index === -1) return {};
+  return { newer: posts[index - 1], older: posts[index + 1] };
+}
+
 /** Guías de "Empieza por aquí", en el orden de su campo startHere */
 export function getStartHerePosts(): PostSummary[] {
   return getAllPosts()

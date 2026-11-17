@@ -7,6 +7,7 @@ import {
   TestimonialsSection,
   ForWhoSection,
   FAQSection,
+  LatestGuidesSection,
   CalendlySection,
   FooterSection,
 } from '@/components/sections';
@@ -52,6 +53,7 @@ export default function Home() {
         <section id="faq">
           <FAQSection />
         </section>
+        <LatestGuidesSection />
         <CalendlySection />
       </main>
       <FooterSection />
